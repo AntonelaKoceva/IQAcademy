@@ -1,0 +1,50 @@
+@font-face{
+    font-family: "PlayfairDisplay";
+    src: url(/fonts/PlayfairDisplay-Regular.woff2);
+    font-weight: 400;
+}
+@font-face{
+    font-family: "PlayfairDisplayBold";
+    src: url(/fonts/PlayfairDisplay-Bold.woff2);
+    font-weight: 700;
+}
+@font-face{
+    font-family: "SourceSans";
+    src: url(/fonts/SourceSansPro-Regular.woff2);
+    font-weight: 400;
+}
+@font-face{
+    font-family: "SourceSans";
+    src: url(/fonts/SourceSansPro-Light.woff2);
+    font-weight: 300;
+}
+@font-face{
+    font-family: "SourceSansI";
+    src: url(/fonts/SourceSansPro-It.woff2);
+    font-weight: 400;
+}
+@font-face{
+    font-family: "Domine";
+    src: url(/fonts/Domine-Regular.woff2);
+    font-weight: 400;
+}
+@font-face{
+    font-family: "SourceSansSemiBold";
+    src: url(/fonts/SourceSansPro-SemiBold.woff2);
+    font-weight: 600;
+}
+
+$font-pf: "PlayfairDisplay";
+$font-pfB: "PlayfairDisplayBold";
+$font-ss: "SourceSans";
+$font-ssI: "SourceSansI";
+$font-domine: "Domine";
+$font-ssSB: "SourceSansSemiBold";
+
+$color-black: #000000;
+$color-darkgrey: #737373;
+$color-lightgrey: #E8E8E8;
+$color-white: #FFFFFF;
+$color-softTeal: #62A1A4;
+$color-teal: #089D93;
+$color-light: #D9D9D94D;

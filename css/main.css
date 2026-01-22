@@ -1,0 +1,1431 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+}
+button:focus, button:active,
+input:focus,
+input:active {
+  outline: none;
+  box-shadow: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url(/fonts/PlayfairDisplay-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "PlayfairDisplayBold";
+  src: url(/fonts/PlayfairDisplay-Bold.woff2);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "SourceSans";
+  src: url(/fonts/SourceSansPro-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SourceSans";
+  src: url(/fonts/SourceSansPro-Light.woff2);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "SourceSansI";
+  src: url(/fonts/SourceSansPro-It.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Domine";
+  src: url(/fonts/Domine-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SourceSansSemiBold";
+  src: url(/fonts/SourceSansPro-SemiBold.woff2);
+  font-weight: 600;
+}
+.btn {
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #62A1A4;
+  color: #FFFFFF;
+  font-family: "Domine";
+  font-weight: 400;
+  font-size: 14px;
+  width: 164px;
+  height: 40px;
+}
+.btn:hover {
+  background-color: #FFFFFF;
+  color: #089D93;
+  border: 1px solid #089D93;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+header {
+  border-bottom: 4px solid #089D93;
+}
+header #header-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 1520px;
+  margin: 0 auto;
+}
+header #header-item .nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 90px;
+}
+header #header-item .nav span {
+  font-family: "SourceSans";
+  font-size: 18px;
+}
+header #header-item .nav span:hover {
+  cursor: pointer;
+  -webkit-text-decoration: underline #089D93;
+          text-decoration: underline #089D93;
+}
+
+#hero-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 60px;
+}
+#hero-section #hero-item1 {
+  margin-top: 80px;
+  margin-left: 30px;
+  position: relative;
+}
+#hero-section #hero-item1 #playBtn {
+  position: absolute;
+  left: 49%;
+  top: 46%;
+}
+#hero-section #hero-item2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  margin-top: 45px;
+}
+#hero-section #hero-item2 span {
+  font-family: "SourceSans";
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+#hero-section #hero-item2 h1 {
+  font-family: "PlayfairDisplay";
+  font-size: 36px;
+}
+#hero-section #hero-item2 p {
+  font-family: "SourceSans";
+  font-weight: 300;
+  font-size: 24px;
+  display: inline-block;
+  width: 566px;
+  margin-bottom: 20px;
+}
+#hero-section #hero-item2 .enroll-btn {
+  margin-bottom: -20px;
+}
+
+#subscribe-section {
+  background-color: #E8E8E8;
+  margin-top: 80px;
+}
+#subscribe-section #subscribe-subsection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 355px;
+  margin-top: 60px;
+  width: 1520px;
+  margin: 0 auto;
+}
+#subscribe-section #subscribe-subsection h1 {
+  font-family: "PlayfairDisplay";
+  font-size: 36px;
+}
+#subscribe-section #subscribe-subsection p {
+  font-family: "SourceSans";
+  font-weight: 300;
+  font-size: 24px;
+  width: 1160px;
+  text-align: center;
+}
+#subscribe-section #subscribe-subsection #subscribe-item input {
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2509803922);
+  width: 300px;
+  height: 40px;
+  margin-right: 25px;
+}
+#subscribe-section #subscribe-subsection #subscribe-item input::-moz-placeholder {
+  color: #089D93;
+  background-color: #FFFFFF;
+  padding: 10px;
+  font-family: "SourceSans";
+  font-weight: 400;
+  font-size: 14px;
+}
+#subscribe-section #subscribe-subsection #subscribe-item input::placeholder {
+  color: #089D93;
+  background-color: #FFFFFF;
+  padding: 10px;
+  font-family: "SourceSans";
+  font-weight: 400;
+  font-size: 14px;
+}
+
+#programs-section {
+  width: 1520px;
+  margin: 0 auto;
+}
+#programs-section h1 {
+  font-family: "PlayfairDisplay";
+  font-size: 36px;
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 45px;
+}
+#programs-section p {
+  font-family: "SourceSans";
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+}
+#programs-section #academy-align {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 35px;
+  height: 680px;
+  width: 1225px;
+  margin: 0 auto;
+}
+#programs-section #academy-align button:hover {
+  cursor: pointer;
+}
+#programs-section #academy-align button img {
+  margin-bottom: 222px;
+  border-radius: 4px;
+}
+#programs-section #academy-align .academy-sections {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 40px;
+  margin: 65px auto;
+  position: relative;
+}
+#programs-section #academy-align .academy-sections .page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 40px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+#programs-section #academy-align .academy-sections .page.visible {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+#programs-section #academy-align .academy-sections .page .academies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 30px;
+}
+#programs-section #academy-align .academy-sections .page .academies.first-page {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+#programs-section #academy-align .academy-sections .page .academies img {
+  border-radius: 4px;
+}
+#programs-section #academy-align .academy-sections .page .academies h2 {
+  font-family: "SourceSans";
+  font-weight: 400;
+  font-size: 24px;
+}
+#programs-section #academy-align .academy-sections .page .academies p {
+  width: 323px;
+  text-align: center;
+  font-family: "SourceSans";
+  font-weight: 300;
+  font-size: 18px;
+}
+
+#testimonial-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 50px;
+  border-top: 4px solid #62A1A4;
+  border-bottom: 4px solid #62A1A4;
+  padding: 40px 0;
+}
+#testimonial-section h1 {
+  font-family: "PlayfairDisplay";
+  font-weight: 400;
+  font-size: 36px;
+}
+#testimonial-section .content-slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+#testimonial-section .content-slider button {
+  padding-bottom: 10%;
+}
+#testimonial-section .content-slider button:hover {
+  cursor: pointer;
+}
+#testimonial-section .content-slider .slider-container {
+  width: 1230px;
+  height: 320px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+#testimonial-section .content-slider .slider-container .slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 1230px;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+#testimonial-section .content-slider .slider-container .slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+#testimonial-section .content-slider .slider-container .slide .card img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3.5px solid #089D93;
+}
+#testimonial-section .content-slider .slider-container .slide .card .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 35px;
+  margin-top: 35px;
+}
+#testimonial-section .content-slider .slider-container .slide .card .item p {
+  font-family: "SourceSansI";
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+}
+
+#partners-section {
+  width: 1520px;
+  margin: 0 auto;
+}
+#partners-section #partners-subsection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 35px 0px;
+  overflow: hidden;
+}
+#partners-section #partners-subsection h1 {
+  font-family: "PlayfairDisplay";
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+#partners-section #partners-subsection #partner-track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 1520px;
+  animation: scroll 10s linear infinite;
+}
+#partners-section #partners-subsection #partner-track .img-partner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 15px 10px;
+  margin: 0 30px;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1584px);
+  }
+}
+
+#journey-section {
+  background-color: #E8E8E8;
+}
+#journey-section #journey-subsection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 1520px;
+  margin: 0 auto;
+}
+#journey-section #journey-subsection #journey-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 42px;
+}
+#journey-section #journey-subsection #journey-item h1 {
+  font-family: "PlayfairDisplay";
+  font-size: 36px;
+}
+#journey-section #journey-subsection #journey-item p {
+  font-family: "SourceSans";
+  font-weight: 300;
+  font-size: 24px;
+  width: 614px;
+  text-align: center;
+}
+#journey-section #journey-subsection #video {
+  position: relative;
+}
+#journey-section #journey-subsection #video #playImg {
+  padding: 35px 0;
+}
+#journey-section #journey-subsection #video #play {
+  position: absolute;
+  right: 47%;
+  top: 45%;
+}
+
+#footer {
+  width: 1240px;
+  margin: 0 auto;
+}
+#footer .footer-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid black;
+  margin-bottom: 25px;
+  margin-top: 40px;
+}
+#footer .footer-items .logos {
+  margin-bottom: 20px;
+}
+#footer .footer-items .logos #logo {
+  margin-bottom: 20px;
+}
+#footer .footer-items .logos #socials {
+  margin-top: 45px;
+}
+#footer .footer-items .logos #socials img {
+  margin-right: 10px;
+}
+#footer .footer-items .logos #socials img:hover {
+  cursor: pointer;
+}
+#footer .footer-items .contact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 15px;
+  width: 231px;
+  margin-bottom: 20px;
+}
+#footer .footer-items .contact h1 {
+  font-family: "PlayfairDisplay";
+  font-size: 24px;
+}
+#footer .footer-items .contact p {
+  font-family: "SourceSans";
+  font-size: 18px;
+}
+#footer #right {
+  font-style: "SourceSans";
+  font-weight: 400;
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+#introductory-section {
+  width: 100%;
+  height: 330px;
+  background-image: url(/img/concentrated-young-student-woman-working-assignment-doing-homework-laptop-making-notes\ 1.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#introductory-section #introductory-subsection {
+  width: 1520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 300px;
+}
+#introductory-section #introductory-subsection #introductory-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 330px;
+  margin: auto 0;
+}
+#introductory-section #introductory-subsection #introductory-item h1 {
+  font-family: "PlayfairDisplay";
+  font-size: 36px;
+}
+#introductory-section #introductory-subsection #introductory-item p {
+  font-family: "SourceSans";
+  font-weight: 300;
+  font-size: 24px;
+}
+#introductory-section #introductory-subsection #introductory-item #buttons #instructor-btn {
+  border-radius: 4px;
+  border: 1px solid #62A1A4;
+  box-shadow: 2px 2px 4px #737373;
+  background-color: #FFFFFF;
+  color: #089D93;
+  font-family: "PlayfairDisplay";
+  font-size: 14px;
+  width: 164px;
+  height: 40px;
+  margin-left: 15px;
+}
+#introductory-section #introductory-subsection #introductory-item #buttons #instructor-btn:hover {
+  background-color: #62A1A4;
+  color: #FFFFFF;
+  border: 1px solid #089D93;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#program-cards-section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  width: 1240px;
+  margin: 0 auto;
+}
+#program-cards-section #title-our-programs {
+  font-family: "PlayfairDisplay";
+  font-size: 36px;
+  width: 230px;
+  margin-top: 2%;
+}
+#program-cards-section #cards-div #cards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 40px;
+  margin: 40px 0;
+}
+#program-cards-section #cards-div #cards #first-row-cards,
+#program-cards-section #cards-div #cards #second-row-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 120px;
+}
+#program-cards-section #cards-div #cards #first-row-cards #digital img,
+#program-cards-section #cards-div #cards #second-row-cards #digital img {
+  -o-object-position: center 30%;
+     object-position: center 30%;
+}
+#program-cards-section #cards-div #cards #first-row-cards #graphic img,
+#program-cards-section #cards-div #cards #second-row-cards #graphic img {
+  -o-object-position: center 40%;
+     object-position: center 40%;
+}
+#program-cards-section #cards-div #cards #first-row-cards #ux-ui img,
+#program-cards-section #cards-div #cards #second-row-cards #ux-ui img {
+  -o-object-position: center 48%;
+     object-position: center 48%;
+}
+#program-cards-section #cards-div #cards #first-row-cards #motion img,
+#program-cards-section #cards-div #cards #second-row-cards #motion img {
+  -o-object-position: center 40%;
+     object-position: center 40%;
+}
+#program-cards-section #cards-div #cards #first-row-cards #interior img,
+#program-cards-section #cards-div #cards #second-row-cards #interior img {
+  -o-object-position: center 45%;
+     object-position: center 45%;
+}
+#program-cards-section #cards-div #cards #first-row-cards #front-end img,
+#program-cards-section #cards-div #cards #second-row-cards #front-end img {
+  -o-object-position: center 30%;
+     object-position: center 30%;
+}
+#program-cards-section #cards-div #cards #first-row-cards .card-width,
+#program-cards-section #cards-div #cards #second-row-cards .card-width {
+  display: inline-block;
+  width: 333px;
+  height: 333px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  vertical-align: top;
+}
+#program-cards-section #cards-div #cards #first-row-cards .card-width .card-img-fit,
+#program-cards-section #cards-div #cards #second-row-cards .card-width .card-img-fit {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info,
+#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info {
+  background-color: rgba(217, 217, 217, 0.3019607843);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  height: 50%;
+  width: 100%;
+}
+#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info h1,
+#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info h1 {
+  font-family: "SourceSansSemiBold";
+  font-size: 18px;
+  color: #089D93;
+  margin-left: 20px;
+}
+#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info p,
+#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info p {
+  font-family: "SourceSans";
+  font-weight: 300;
+  font-size: 14px;
+  color: #000000;
+  width: 297px;
+  margin-left: 20px;
+}
+#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info span,
+#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info img,
+#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info span,
+#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info img {
+  font-family: "SourceSans";
+  font-weight: 400;
+  font-size: 14px;
+  margin-left: 20px;
+}
+#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info span #blue-arrow,
+#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info img #blue-arrow,
+#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info span #blue-arrow,
+#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info img #blue-arrow {
+  display: none;
+}
+#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info span #black-arrow,
+#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info img #black-arrow,
+#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info span #black-arrow,
+#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info img #black-arrow {
+  display: inline;
+  margin-left: 5px;
+}
+#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info span:hover,
+#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info img:hover,
+#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info span:hover,
+#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info img:hover {
+  color: #089D93;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info span:hover #black-arrow,
+#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info img:hover #black-arrow,
+#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info span:hover #black-arrow,
+#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info img:hover #black-arrow {
+  display: none;
+}
+#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info span:hover #blue-arrow,
+#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info img:hover #blue-arrow,
+#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info span:hover #blue-arrow,
+#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info img:hover #blue-arrow {
+  display: inline;
+  margin-left: 5px;
+}
+
+#testimonial-programs-section {
+  background-color: #62A1A4;
+}
+#testimonial-programs-section #testimonial-programs-subsection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 530px;
+  gap: 7%;
+  width: 1240px;
+  margin: 0 auto;
+}
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-introductury {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 496px;
+  gap: 50px;
+}
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-introductury h1 {
+  font-family: "PlayfairDisplay";
+  font-size: 36px;
+  color: #FFFFFF;
+  width: 272px;
+}
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-introductury p {
+  font-family: "SourceSans";
+  font-weight: 300;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-introductury button {
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #FFFFFF;
+  color: #089D93;
+  font-family: "PlayfairDisplay";
+  font-weight: 400;
+  font-size: 14px;
+  width: 164px;
+  height: 40px;
+}
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-introductury button:hover {
+  background-color: #62A1A4;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-students {
+  margin-right: 10%;
+}
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students .student {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 25px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  margin: 20px;
+  width: 510px;
+  height: 116px;
+}
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students .student #elena,
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students .student #maja {
+  font-family: "SourceSans";
+  font-weight: 400;
+  font-size: 14px;
+  color: #737373;
+}
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students .student #elena p,
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students .student #maja p {
+  width: 335px;
+  margin-bottom: 3px;
+}
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students .student #marko {
+  font-family: "SourceSansI";
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+}
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students .student #marko p {
+  width: 335px;
+  margin-bottom: 3px;
+}
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students .elena-maja {
+  margin-left: 30%;
+}
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students .student-marko {
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.25);
+}
+
+.popups {
+  width: 1196px;
+  margin: 0 auto;
+}
+.popups #digital-marketing-popup,
+.popups #graphic-design-popup,
+.popups #motion-graphics-popup,
+.popups #uxui-design-popup,
+.popups #interior-design-popup,
+.popups #frontend-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+}
+.popups #digital-marketing-popup .exc-container,
+.popups #graphic-design-popup .exc-container,
+.popups #motion-graphics-popup .exc-container,
+.popups #uxui-design-popup .exc-container,
+.popups #interior-design-popup .exc-container,
+.popups #frontend-popup .exc-container {
+  margin-top: 25px;
+  margin-right: 38px;
+}
+.popups #digital-marketing-popup .exc-container .exc-btn,
+.popups #graphic-design-popup .exc-container .exc-btn,
+.popups #motion-graphics-popup .exc-container .exc-btn,
+.popups #uxui-design-popup .exc-container .exc-btn,
+.popups #interior-design-popup .exc-container .exc-btn,
+.popups #frontend-popup .exc-container .exc-btn {
+  padding-right: 6px;
+}
+.popups #digital-marketing-popup .academy-popup,
+.popups #graphic-design-popup .academy-popup,
+.popups #motion-graphics-popup .academy-popup,
+.popups #uxui-design-popup .academy-popup,
+.popups #interior-design-popup .academy-popup,
+.popups #frontend-popup .academy-popup {
+  width: 1140px;
+  margin: 28px auto;
+}
+.popups #digital-marketing-popup .academy-popup .academy-container,
+.popups #graphic-design-popup .academy-popup .academy-container,
+.popups #motion-graphics-popup .academy-popup .academy-container,
+.popups #uxui-design-popup .academy-popup .academy-container,
+.popups #interior-design-popup .academy-popup .academy-container,
+.popups #frontend-popup .academy-popup .academy-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.popups #digital-marketing-popup .academy-popup .academy-container .academy-text,
+.popups #graphic-design-popup .academy-popup .academy-container .academy-text,
+.popups #motion-graphics-popup .academy-popup .academy-container .academy-text,
+.popups #uxui-design-popup .academy-popup .academy-container .academy-text,
+.popups #interior-design-popup .academy-popup .academy-container .academy-text,
+.popups #frontend-popup .academy-popup .academy-container .academy-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: 326px;
+  width: 467px;
+}
+.popups #digital-marketing-popup .academy-popup .academy-container .academy-text span,
+.popups #graphic-design-popup .academy-popup .academy-container .academy-text span,
+.popups #motion-graphics-popup .academy-popup .academy-container .academy-text span,
+.popups #uxui-design-popup .academy-popup .academy-container .academy-text span,
+.popups #interior-design-popup .academy-popup .academy-container .academy-text span,
+.popups #frontend-popup .academy-popup .academy-container .academy-text span {
+  font-family: "SourceSans";
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.popups #digital-marketing-popup .academy-popup .academy-container .academy-text h1,
+.popups #graphic-design-popup .academy-popup .academy-container .academy-text h1,
+.popups #motion-graphics-popup .academy-popup .academy-container .academy-text h1,
+.popups #uxui-design-popup .academy-popup .academy-container .academy-text h1,
+.popups #interior-design-popup .academy-popup .academy-container .academy-text h1,
+.popups #frontend-popup .academy-popup .academy-container .academy-text h1 {
+  font-family: "PlayfairDisplay";
+  font-size: 36px;
+}
+.popups #digital-marketing-popup .academy-popup .academy-container .academy-text p,
+.popups #graphic-design-popup .academy-popup .academy-container .academy-text p,
+.popups #motion-graphics-popup .academy-popup .academy-container .academy-text p,
+.popups #uxui-design-popup .academy-popup .academy-container .academy-text p,
+.popups #interior-design-popup .academy-popup .academy-container .academy-text p,
+.popups #frontend-popup .academy-popup .academy-container .academy-text p {
+  font-family: "SourceSans";
+  font-weight: 300;
+  font-size: 18px;
+  width: 467px;
+}
+.popups #digital-marketing-popup .overview,
+.popups #graphic-design-popup .overview,
+.popups #motion-graphics-popup .overview,
+.popups #uxui-design-popup .overview,
+.popups #interior-design-popup .overview,
+.popups #frontend-popup .overview {
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 196px;
+  background-color: rgba(217, 217, 217, 0.3019607843);
+}
+.popups #digital-marketing-popup .overview h1,
+.popups #graphic-design-popup .overview h1,
+.popups #motion-graphics-popup .overview h1,
+.popups #uxui-design-popup .overview h1,
+.popups #interior-design-popup .overview h1,
+.popups #frontend-popup .overview h1 {
+  font-family: "PlayfairDisplay";
+  font-size: 24px;
+}
+.popups #digital-marketing-popup .overview p,
+.popups #graphic-design-popup .overview p,
+.popups #motion-graphics-popup .overview p,
+.popups #uxui-design-popup .overview p,
+.popups #interior-design-popup .overview p,
+.popups #frontend-popup .overview p {
+  font-family: "SourceSans";
+  font-weight: 300;
+  font-size: 18px;
+  width: 942px;
+  text-align: center;
+}
+.popups #digital-marketing-popup .highlights,
+.popups #graphic-design-popup .highlights,
+.popups #motion-graphics-popup .highlights,
+.popups #uxui-design-popup .highlights,
+.popups #interior-design-popup .highlights,
+.popups #frontend-popup .highlights {
+  width: 1015px;
+  margin: 5px auto;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 50px;
+}
+.popups #digital-marketing-popup .highlights .highlights-text,
+.popups #graphic-design-popup .highlights .highlights-text,
+.popups #motion-graphics-popup .highlights .highlights-text,
+.popups #uxui-design-popup .highlights .highlights-text,
+.popups #interior-design-popup .highlights .highlights-text,
+.popups #frontend-popup .highlights .highlights-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  height: 256px;
+}
+.popups #digital-marketing-popup .highlights .highlights-text h1,
+.popups #graphic-design-popup .highlights .highlights-text h1,
+.popups #motion-graphics-popup .highlights .highlights-text h1,
+.popups #uxui-design-popup .highlights .highlights-text h1,
+.popups #interior-design-popup .highlights .highlights-text h1,
+.popups #frontend-popup .highlights .highlights-text h1 {
+  font-family: "PlayfairDisplay";
+  font-size: 24px;
+}
+.popups #digital-marketing-popup .highlights .highlights-text p,
+.popups #graphic-design-popup .highlights .highlights-text p,
+.popups #motion-graphics-popup .highlights .highlights-text p,
+.popups #uxui-design-popup .highlights .highlights-text p,
+.popups #interior-design-popup .highlights .highlights-text p,
+.popups #frontend-popup .highlights .highlights-text p {
+  font-family: "SourceSans";
+  font-weight: 300;
+  font-size: 18px;
+  width: 341px;
+}
+.popups #digital-marketing-popup .highlights .highlights-text .full-program-btn,
+.popups #graphic-design-popup .highlights .highlights-text .full-program-btn,
+.popups #motion-graphics-popup .highlights .highlights-text .full-program-btn,
+.popups #uxui-design-popup .highlights .highlights-text .full-program-btn,
+.popups #interior-design-popup .highlights .highlights-text .full-program-btn,
+.popups #frontend-popup .highlights .highlights-text .full-program-btn {
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #62A1A4;
+  color: #FFFFFF;
+  font-family: "Domine";
+  font-weight: 400;
+  font-size: 14px;
+  width: 200px;
+  height: 40px;
+}
+.popups #digital-marketing-popup .highlights .highlights-text .full-program-btn:hover,
+.popups #graphic-design-popup .highlights .highlights-text .full-program-btn:hover,
+.popups #motion-graphics-popup .highlights .highlights-text .full-program-btn:hover,
+.popups #uxui-design-popup .highlights .highlights-text .full-program-btn:hover,
+.popups #interior-design-popup .highlights .highlights-text .full-program-btn:hover,
+.popups #frontend-popup .highlights .highlights-text .full-program-btn:hover {
+  background-color: #FFFFFF;
+  color: #089D93;
+  border: 1px solid #089D93;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.popups #digital-marketing-popup .highlights .highlights-icons,
+.popups #graphic-design-popup .highlights .highlights-icons,
+.popups #motion-graphics-popup .highlights .highlights-icons,
+.popups #uxui-design-popup .highlights .highlights-icons,
+.popups #interior-design-popup .highlights .highlights-icons,
+.popups #frontend-popup .highlights .highlights-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 700px;
+}
+.popups #digital-marketing-popup .highlights .highlights-icons .icon,
+.popups #graphic-design-popup .highlights .highlights-icons .icon,
+.popups #motion-graphics-popup .highlights .highlights-icons .icon,
+.popups #uxui-design-popup .highlights .highlights-icons .icon,
+.popups #interior-design-popup .highlights .highlights-icons .icon,
+.popups #frontend-popup .highlights .highlights-icons .icon {
+  width: 242px;
+  height: 113px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+.popups #digital-marketing-popup .highlights .highlights-icons .icon:nth-of-type(1),
+.popups #graphic-design-popup .highlights .highlights-icons .icon:nth-of-type(1),
+.popups #motion-graphics-popup .highlights .highlights-icons .icon:nth-of-type(1),
+.popups #uxui-design-popup .highlights .highlights-icons .icon:nth-of-type(1),
+.popups #interior-design-popup .highlights .highlights-icons .icon:nth-of-type(1),
+.popups #frontend-popup .highlights .highlights-icons .icon:nth-of-type(1) {
+  margin-bottom: 25px;
+}
+.popups #digital-marketing-popup .highlights .highlights-icons .icon img,
+.popups #graphic-design-popup .highlights .highlights-icons .icon img,
+.popups #motion-graphics-popup .highlights .highlights-icons .icon img,
+.popups #uxui-design-popup .highlights .highlights-icons .icon img,
+.popups #interior-design-popup .highlights .highlights-icons .icon img,
+.popups #frontend-popup .highlights .highlights-icons .icon img {
+  border: 1.5px solid #62A1A4;
+  border-radius: 50%;
+  background-color: #62A1A4;
+  box-shadow: 0 0 0 5px #62A1A4;
+  margin-left: 3px;
+}
+.popups #digital-marketing-popup .highlights .highlights-icons .icon h1,
+.popups #graphic-design-popup .highlights .highlights-icons .icon h1,
+.popups #motion-graphics-popup .highlights .highlights-icons .icon h1,
+.popups #uxui-design-popup .highlights .highlights-icons .icon h1,
+.popups #interior-design-popup .highlights .highlights-icons .icon h1,
+.popups #frontend-popup .highlights .highlights-icons .icon h1 {
+  font-family: "SourceSans";
+  font-weight: 400;
+  font-size: 18px;
+}
+.popups #digital-marketing-popup .highlights .highlights-icons .icon p,
+.popups #graphic-design-popup .highlights .highlights-icons .icon p,
+.popups #motion-graphics-popup .highlights .highlights-icons .icon p,
+.popups #uxui-design-popup .highlights .highlights-icons .icon p,
+.popups #interior-design-popup .highlights .highlights-icons .icon p,
+.popups #frontend-popup .highlights .highlights-icons .icon p {
+  font-family: "SourceSans";
+  font-weight: 300;
+  font-size: 14px;
+}
+.popups #digital-marketing-popup .pricing,
+.popups #graphic-design-popup .pricing,
+.popups #motion-graphics-popup .pricing,
+.popups #uxui-design-popup .pricing,
+.popups #interior-design-popup .pricing,
+.popups #frontend-popup .pricing {
+  width: 1140px;
+  height: 668px;
+  margin: 0 auto;
+  background-color: rgba(217, 217, 217, 0.3019607843);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.popups #digital-marketing-popup .pricing .price-text,
+.popups #graphic-design-popup .pricing .price-text,
+.popups #motion-graphics-popup .pricing .price-text,
+.popups #uxui-design-popup .pricing .price-text,
+.popups #interior-design-popup .pricing .price-text,
+.popups #frontend-popup .pricing .price-text {
+  background-color: rgba(98, 161, 164, 0.33);
+  border-radius: 4px;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.popups #digital-marketing-popup .pricing .price-text span,
+.popups #graphic-design-popup .pricing .price-text span,
+.popups #motion-graphics-popup .pricing .price-text span,
+.popups #uxui-design-popup .pricing .price-text span,
+.popups #interior-design-popup .pricing .price-text span,
+.popups #frontend-popup .pricing .price-text span {
+  font-family: "PlayfairDisplay";
+  font-size: 14px;
+  color: #089D93;
+  text-transform: uppercase;
+}
+.popups #digital-marketing-popup .pricing h1,
+.popups #graphic-design-popup .pricing h1,
+.popups #motion-graphics-popup .pricing h1,
+.popups #uxui-design-popup .pricing h1,
+.popups #interior-design-popup .pricing h1,
+.popups #frontend-popup .pricing h1 {
+  font-family: "PlayfairDisplay";
+  font-size: 24px;
+}
+.popups #digital-marketing-popup .pricing .first-p,
+.popups #graphic-design-popup .pricing .first-p,
+.popups #motion-graphics-popup .pricing .first-p,
+.popups #uxui-design-popup .pricing .first-p,
+.popups #interior-design-popup .pricing .first-p,
+.popups #frontend-popup .pricing .first-p {
+  font-family: "SourceSans";
+  font-weight: 300;
+  font-size: 18px;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers,
+.popups #graphic-design-popup .pricing .pricing-containers,
+.popups #motion-graphics-popup .pricing .pricing-containers,
+.popups #uxui-design-popup .pricing .pricing-containers,
+.popups #interior-design-popup .pricing .pricing-containers,
+.popups #frontend-popup .pricing .pricing-containers {
+  width: 880px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .enrollment .enroll,
+.popups #graphic-design-popup .pricing .pricing-containers .enrollment .enroll,
+.popups #motion-graphics-popup .pricing .pricing-containers .enrollment .enroll,
+.popups #uxui-design-popup .pricing .pricing-containers .enrollment .enroll,
+.popups #interior-design-popup .pricing .pricing-containers .enrollment .enroll,
+.popups #frontend-popup .pricing .pricing-containers .enrollment .enroll {
+  width: 290px;
+  height: 225px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2509803922);
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .enrollment .enroll .item1,
+.popups #graphic-design-popup .pricing .pricing-containers .enrollment .enroll .item1,
+.popups #motion-graphics-popup .pricing .pricing-containers .enrollment .enroll .item1,
+.popups #uxui-design-popup .pricing .pricing-containers .enrollment .enroll .item1,
+.popups #interior-design-popup .pricing .pricing-containers .enrollment .enroll .item1,
+.popups #frontend-popup .pricing .pricing-containers .enrollment .enroll .item1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .enrollment .enroll .item1 .p1,
+.popups #graphic-design-popup .pricing .pricing-containers .enrollment .enroll .item1 .p1,
+.popups #motion-graphics-popup .pricing .pricing-containers .enrollment .enroll .item1 .p1,
+.popups #uxui-design-popup .pricing .pricing-containers .enrollment .enroll .item1 .p1,
+.popups #interior-design-popup .pricing .pricing-containers .enrollment .enroll .item1 .p1,
+.popups #frontend-popup .pricing .pricing-containers .enrollment .enroll .item1 .p1 {
+  font-family: "PlayfairDisplayBold";
+  font-weight: 700;
+  font-size: 14px;
+  color: #62A1A4;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .enrollment .enroll .item1 .p2,
+.popups #graphic-design-popup .pricing .pricing-containers .enrollment .enroll .item1 .p2,
+.popups #motion-graphics-popup .pricing .pricing-containers .enrollment .enroll .item1 .p2,
+.popups #uxui-design-popup .pricing .pricing-containers .enrollment .enroll .item1 .p2,
+.popups #interior-design-popup .pricing .pricing-containers .enrollment .enroll .item1 .p2,
+.popups #frontend-popup .pricing .pricing-containers .enrollment .enroll .item1 .p2 {
+  font-family: "SourceSans";
+  font-weight: 300;
+  font-size: 14px;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .enrollment .enroll .item2,
+.popups #graphic-design-popup .pricing .pricing-containers .enrollment .enroll .item2,
+.popups #motion-graphics-popup .pricing .pricing-containers .enrollment .enroll .item2,
+.popups #uxui-design-popup .pricing .pricing-containers .enrollment .enroll .item2,
+.popups #interior-design-popup .pricing .pricing-containers .enrollment .enroll .item2,
+.popups #frontend-popup .pricing .pricing-containers .enrollment .enroll .item2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 6px;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .enrollment .enroll .item2 span,
+.popups #graphic-design-popup .pricing .pricing-containers .enrollment .enroll .item2 span,
+.popups #motion-graphics-popup .pricing .pricing-containers .enrollment .enroll .item2 span,
+.popups #uxui-design-popup .pricing .pricing-containers .enrollment .enroll .item2 span,
+.popups #interior-design-popup .pricing .pricing-containers .enrollment .enroll .item2 span,
+.popups #frontend-popup .pricing .pricing-containers .enrollment .enroll .item2 span {
+  font-family: "SourceSans";
+  font-weight: 400;
+  font-size: 14px;
+  color: #62A1A4;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .enrollment .enroll .item2 span img,
+.popups #graphic-design-popup .pricing .pricing-containers .enrollment .enroll .item2 span img,
+.popups #motion-graphics-popup .pricing .pricing-containers .enrollment .enroll .item2 span img,
+.popups #uxui-design-popup .pricing .pricing-containers .enrollment .enroll .item2 span img,
+.popups #interior-design-popup .pricing .pricing-containers .enrollment .enroll .item2 span img,
+.popups #frontend-popup .pricing .pricing-containers .enrollment .enroll .item2 span img {
+  margin-right: 8px;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .enrollment .enroll .btn-resize,
+.popups #graphic-design-popup .pricing .pricing-containers .enrollment .enroll .btn-resize,
+.popups #motion-graphics-popup .pricing .pricing-containers .enrollment .enroll .btn-resize,
+.popups #uxui-design-popup .pricing .pricing-containers .enrollment .enroll .btn-resize,
+.popups #interior-design-popup .pricing .pricing-containers .enrollment .enroll .btn-resize,
+.popups #frontend-popup .pricing .pricing-containers .enrollment .enroll .btn-resize {
+  width: 230px;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .prices-features,
+.popups #graphic-design-popup .pricing .pricing-containers .prices-features,
+.popups #motion-graphics-popup .pricing .pricing-containers .prices-features,
+.popups #uxui-design-popup .pricing .pricing-containers .prices-features,
+.popups #interior-design-popup .pricing .pricing-containers .prices-features,
+.popups #frontend-popup .pricing .pricing-containers .prices-features {
+  width: 534px;
+  height: 225px;
+  border-radius: 8px;
+  background-color: rgb(98, 161, 164);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .prices-features .total-price,
+.popups #graphic-design-popup .pricing .pricing-containers .prices-features .total-price,
+.popups #motion-graphics-popup .pricing .pricing-containers .prices-features .total-price,
+.popups #uxui-design-popup .pricing .pricing-containers .prices-features .total-price,
+.popups #interior-design-popup .pricing .pricing-containers .prices-features .total-price,
+.popups #frontend-popup .pricing .pricing-containers .prices-features .total-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 75px;
+  border-right: 1px solid #FFFFFF;
+  padding-right: 20px;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .prices-features .total-price .price,
+.popups #graphic-design-popup .pricing .pricing-containers .prices-features .total-price .price,
+.popups #motion-graphics-popup .pricing .pricing-containers .prices-features .total-price .price,
+.popups #uxui-design-popup .pricing .pricing-containers .prices-features .total-price .price,
+.popups #interior-design-popup .pricing .pricing-containers .prices-features .total-price .price,
+.popups #frontend-popup .pricing .pricing-containers .prices-features .total-price .price {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .prices-features .total-price .price .program-price,
+.popups #graphic-design-popup .pricing .pricing-containers .prices-features .total-price .price .program-price,
+.popups #motion-graphics-popup .pricing .pricing-containers .prices-features .total-price .price .program-price,
+.popups #uxui-design-popup .pricing .pricing-containers .prices-features .total-price .price .program-price,
+.popups #interior-design-popup .pricing .pricing-containers .prices-features .total-price .price .program-price,
+.popups #frontend-popup .pricing .pricing-containers .prices-features .total-price .price .program-price {
+  font-family: "PlayfairDisplay";
+  font-weight: 400;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .prices-features .total-price .price .program-price-text,
+.popups #graphic-design-popup .pricing .pricing-containers .prices-features .total-price .price .program-price-text,
+.popups #motion-graphics-popup .pricing .pricing-containers .prices-features .total-price .price .program-price-text,
+.popups #uxui-design-popup .pricing .pricing-containers .prices-features .total-price .price .program-price-text,
+.popups #interior-design-popup .pricing .pricing-containers .prices-features .total-price .price .program-price-text,
+.popups #frontend-popup .pricing .pricing-containers .prices-features .total-price .price .program-price-text {
+  width: 224px;
+  font-family: "SourceSans";
+  font-weight: 300;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .prices-features .total-price span,
+.popups #graphic-design-popup .pricing .pricing-containers .prices-features .total-price span,
+.popups #motion-graphics-popup .pricing .pricing-containers .prices-features .total-price span,
+.popups #uxui-design-popup .pricing .pricing-containers .prices-features .total-price span,
+.popups #interior-design-popup .pricing .pricing-containers .prices-features .total-price span,
+.popups #frontend-popup .pricing .pricing-containers .prices-features .total-price span {
+  font-family: "SourceSansSemiBold";
+  font-weight: 600;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .prices-features .features,
+.popups #graphic-design-popup .pricing .pricing-containers .prices-features .features,
+.popups #motion-graphics-popup .pricing .pricing-containers .prices-features .features,
+.popups #uxui-design-popup .pricing .pricing-containers .prices-features .features,
+.popups #interior-design-popup .pricing .pricing-containers .prices-features .features,
+.popups #frontend-popup .pricing .pricing-containers .prices-features .features {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .prices-features .features .feature-title,
+.popups #graphic-design-popup .pricing .pricing-containers .prices-features .features .feature-title,
+.popups #motion-graphics-popup .pricing .pricing-containers .prices-features .features .feature-title,
+.popups #uxui-design-popup .pricing .pricing-containers .prices-features .features .feature-title,
+.popups #interior-design-popup .pricing .pricing-containers .prices-features .features .feature-title,
+.popups #frontend-popup .pricing .pricing-containers .prices-features .features .feature-title {
+  color: #FFFFFF;
+  font-family: "SourceSans";
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .prices-features .features .features-container,
+.popups #graphic-design-popup .pricing .pricing-containers .prices-features .features .features-container,
+.popups #motion-graphics-popup .pricing .pricing-containers .prices-features .features .features-container,
+.popups #uxui-design-popup .pricing .pricing-containers .prices-features .features .features-container,
+.popups #interior-design-popup .pricing .pricing-containers .prices-features .features .features-container,
+.popups #frontend-popup .pricing .pricing-containers .prices-features .features .features-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 13px;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .prices-features .features .features-container .feature-text,
+.popups #graphic-design-popup .pricing .pricing-containers .prices-features .features .features-container .feature-text,
+.popups #motion-graphics-popup .pricing .pricing-containers .prices-features .features .features-container .feature-text,
+.popups #uxui-design-popup .pricing .pricing-containers .prices-features .features .features-container .feature-text,
+.popups #interior-design-popup .pricing .pricing-containers .prices-features .features .features-container .feature-text,
+.popups #frontend-popup .pricing .pricing-containers .prices-features .features .features-container .feature-text {
+  color: #FFFFFF;
+  font-family: "SourceSans";
+  font-weight: 300;
+  font-size: 14px;
+}
+.popups #digital-marketing-popup .pricing .pricing-containers .prices-features .features .features-container .feature-text img,
+.popups #graphic-design-popup .pricing .pricing-containers .prices-features .features .features-container .feature-text img,
+.popups #motion-graphics-popup .pricing .pricing-containers .prices-features .features .features-container .feature-text img,
+.popups #uxui-design-popup .pricing .pricing-containers .prices-features .features .features-container .feature-text img,
+.popups #interior-design-popup .pricing .pricing-containers .prices-features .features .features-container .feature-text img,
+.popups #frontend-popup .pricing .pricing-containers .prices-features .features .features-container .feature-text img {
+  margin-right: 5px;
+}
+.popups #digital-marketing-popup .pricing .second-p,
+.popups #graphic-design-popup .pricing .second-p,
+.popups #motion-graphics-popup .pricing .second-p,
+.popups #uxui-design-popup .pricing .second-p,
+.popups #interior-design-popup .pricing .second-p,
+.popups #frontend-popup .pricing .second-p {
+  font-family: "SourceSans";
+  font-weight: 400;
+  font-size: 18px;
+}
+.popups #digital-marketing-popup .pricing .pricing-buttons,
+.popups #graphic-design-popup .pricing .pricing-buttons,
+.popups #motion-graphics-popup .pricing .pricing-buttons,
+.popups #uxui-design-popup .pricing .pricing-buttons,
+.popups #interior-design-popup .pricing .pricing-buttons,
+.popups #frontend-popup .pricing .pricing-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.popups #digital-marketing-popup .pricing .pricing-buttons button,
+.popups #graphic-design-popup .pricing .pricing-buttons button,
+.popups #motion-graphics-popup .pricing .pricing-buttons button,
+.popups #uxui-design-popup .pricing .pricing-buttons button,
+.popups #interior-design-popup .pricing .pricing-buttons button,
+.popups #frontend-popup .pricing .pricing-buttons button {
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #62A1A4;
+  color: #FFFFFF;
+  font-family: "Domine";
+  font-weight: 400;
+  font-size: 14px;
+  width: 164px;
+  height: 40px;
+}
+.popups #digital-marketing-popup .pricing .pricing-buttons button:nth-child(2),
+.popups #graphic-design-popup .pricing .pricing-buttons button:nth-child(2),
+.popups #motion-graphics-popup .pricing .pricing-buttons button:nth-child(2),
+.popups #uxui-design-popup .pricing .pricing-buttons button:nth-child(2),
+.popups #interior-design-popup .pricing .pricing-buttons button:nth-child(2),
+.popups #frontend-popup .pricing .pricing-buttons button:nth-child(2) {
+  width: 200px;
+}
+.popups #digital-marketing-popup .pricing .pricing-buttons button:hover,
+.popups #graphic-design-popup .pricing .pricing-buttons button:hover,
+.popups #motion-graphics-popup .pricing .pricing-buttons button:hover,
+.popups #uxui-design-popup .pricing .pricing-buttons button:hover,
+.popups #interior-design-popup .pricing .pricing-buttons button:hover,
+.popups #frontend-popup .pricing .pricing-buttons button:hover {
+  background-color: #FFFFFF;
+  color: #089D93;
+  border: 1px solid #089D93;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
