@@ -354,6 +354,7 @@ header {
         @include mixins.flexbox($alignItems: center, $justifyContent: space-evenly);
         width: 1520px;
         margin: 0 auto;
+        height: 465px;
 
         #journey-item {
             @include mixins.flexbox($direction: column, $alignItems: center);
@@ -744,7 +745,6 @@ header {
 }
 
 .popups {
-    // display: none;
     width: 1196px;
     margin: 0 auto;
 

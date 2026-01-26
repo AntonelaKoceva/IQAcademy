@@ -421,6 +421,7 @@ header #header-item .nav span:hover {
   flex-wrap: nowrap;
   width: 1520px;
   margin: 0 auto;
+  height: 465px;
 }
 #journey-section #journey-subsection #journey-item {
   display: flex;

@@ -9,6 +9,7 @@ const rightBtn = document.querySelector(".right");
 const leftB = document.getElementById("left-slide");
 const rightB = document.getElementById("right-slide");
 const pages = document.querySelectorAll(".page");
+
 let current = 0;
 let currentPage = 0;
 
@@ -84,3 +85,5 @@ leftB.addEventListener("click", () => {
     const prevPage = (currentPage - 1 + pages.length) % pages.length;
     showPage(prevPage);
 });
+
+
