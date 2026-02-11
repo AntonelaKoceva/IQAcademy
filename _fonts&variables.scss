@@ -41,6 +41,12 @@ $font-ssI: "SourceSansI";
 $font-domine: "Domine";
 $font-ssSB: "SourceSansSemiBold";
 
+$breakpoints:("xs": 420px,
+  "s":560px,
+  "m": 768px,
+  "l": 1024px,
+  "xl": 1200px);
+
 $color-black: #000000;
 $color-darkgrey: #737373;
 $color-lightgrey: #E8E8E8;

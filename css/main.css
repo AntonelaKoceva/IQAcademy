@@ -1,30 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-  font: inherit;
-}
-
-button,
-input {
-  background: none;
-  border: none;
-}
-button:focus, button:active,
-input:focus,
-input:active {
-  outline: none;
-  box-shadow: none;
-}
-
-a {
-  text-decoration: none;
-}
-a:visited {
-  text-decoration: none;
-}
-
 @font-face {
   font-family: "PlayfairDisplay";
   src: url(/fonts/PlayfairDisplay-Regular.woff2);
@@ -60,6 +33,33 @@ a:visited {
   src: url(/fonts/SourceSansPro-SemiBold.woff2);
   font-weight: 600;
 }
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+}
+button:focus, button:active,
+input:focus,
+input:active {
+  outline: none;
+  box-shadow: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+
 .btn {
   border-radius: 4px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -88,8 +88,6 @@ header #header-item {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: nowrap;
-  width: 1520px;
-  margin: 0 auto;
 }
 header #header-item .nav {
   display: flex;
@@ -132,13 +130,13 @@ header #header-item .nav span:hover {
   flex-wrap: nowrap;
   margin-top: 45px;
 }
-#hero-section #hero-item2 span {
+#hero-section #hero-item2 span:nth-of-type(1) {
   font-family: "SourceSans";
   font-weight: 400;
   font-size: 18px;
   text-transform: uppercase;
 }
-#hero-section #hero-item2 h1 {
+#hero-section #hero-item2 #hero-title {
   font-family: "PlayfairDisplay";
   font-size: 36px;
 }
@@ -166,10 +164,8 @@ header #header-item .nav span:hover {
   flex-wrap: nowrap;
   height: 355px;
   margin-top: 60px;
-  width: 1520px;
-  margin: 0 auto;
 }
-#subscribe-section #subscribe-subsection h1 {
+#subscribe-section #subscribe-subsection #subscribe-title {
   font-family: "PlayfairDisplay";
   font-size: 36px;
 }
@@ -205,10 +201,11 @@ header #header-item .nav span:hover {
 }
 
 #programs-section {
-  width: 1520px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
-#programs-section h1 {
+#programs-section #programs-title {
   font-family: "PlayfairDisplay";
   font-size: 36px;
   text-align: center;
@@ -279,7 +276,7 @@ header #header-item .nav span:hover {
 #programs-section #academy-align .academy-sections .page .academies img {
   border-radius: 4px;
 }
-#programs-section #academy-align .academy-sections .page .academies h2 {
+#programs-section #academy-align .academy-sections .page .academies .program-titles {
   font-family: "SourceSans";
   font-weight: 400;
   font-size: 24px;
@@ -290,6 +287,20 @@ header #header-item .nav span:hover {
   font-family: "SourceSans";
   font-weight: 300;
   font-size: 18px;
+}
+@media (max-width: 419.98px) {
+  #programs-section #academy-align {
+    width: 0;
+    background-color: red;
+  }
+  #programs-section #academy-align .academy-sections {
+    margin: 0;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  #programs-section #academy-align .academy-sections .page {
+    width: 100vw;
+  }
 }
 
 #testimonial-section {
@@ -302,7 +313,7 @@ header #header-item .nav span:hover {
   border-bottom: 4px solid #62A1A4;
   padding: 40px 0;
 }
-#testimonial-section h1 {
+#testimonial-section #testimonial-title {
   font-family: "PlayfairDisplay";
   font-weight: 400;
   font-size: 36px;
@@ -370,18 +381,18 @@ header #header-item .nav span:hover {
 }
 
 #partners-section {
-  width: 1520px;
   margin: 0 auto;
 }
 #partners-section #partners-subsection {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: nowrap;
-  margin: 35px 0px;
+  margin: 35px auto;
   overflow: hidden;
 }
-#partners-section #partners-subsection h1 {
+#partners-section #partners-subsection #partners-title {
   font-family: "PlayfairDisplay";
   font-size: 36px;
   margin-bottom: 30px;
@@ -401,14 +412,6 @@ header #header-item .nav span:hover {
   padding: 15px 10px;
   margin: 0 30px;
 }
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-1584px);
-  }
-}
 
 #journey-section {
   background-color: #E8E8E8;
@@ -419,8 +422,6 @@ header #header-item .nav span:hover {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: nowrap;
-  width: 1520px;
-  margin: 0 auto;
   height: 465px;
 }
 #journey-section #journey-subsection #journey-item {
@@ -430,7 +431,7 @@ header #header-item .nav span:hover {
   flex-wrap: nowrap;
   gap: 42px;
 }
-#journey-section #journey-subsection #journey-item h1 {
+#journey-section #journey-subsection #journey-item #journey-title {
   font-family: "PlayfairDisplay";
   font-size: 36px;
 }
@@ -453,11 +454,11 @@ header #header-item .nav span:hover {
   top: 45%;
 }
 
-#footer {
-  width: 1240px;
+footer #footer {
+  width: 75vw;
   margin: 0 auto;
 }
-#footer .footer-items {
+footer #footer .footer-items {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -467,22 +468,22 @@ header #header-item .nav span:hover {
   margin-bottom: 25px;
   margin-top: 40px;
 }
-#footer .footer-items .logos {
+footer #footer .footer-items .logos {
   margin-bottom: 20px;
 }
-#footer .footer-items .logos #logo {
+footer #footer .footer-items .logos #logo {
   margin-bottom: 20px;
 }
-#footer .footer-items .logos #socials {
+footer #footer .footer-items .logos #socials {
   margin-top: 45px;
 }
-#footer .footer-items .logos #socials img {
+footer #footer .footer-items .logos #socials img {
   margin-right: 10px;
 }
-#footer .footer-items .logos #socials img:hover {
+footer #footer .footer-items .logos #socials img:hover {
   cursor: pointer;
 }
-#footer .footer-items .contact {
+footer #footer .footer-items .contact {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -490,15 +491,15 @@ header #header-item .nav span:hover {
   width: 231px;
   margin-bottom: 20px;
 }
-#footer .footer-items .contact h1 {
+footer #footer .footer-items .contact .contactus-title {
   font-family: "PlayfairDisplay";
   font-size: 24px;
 }
-#footer .footer-items .contact p {
+footer #footer .footer-items .contact p {
   font-family: "SourceSans";
   font-size: 18px;
 }
-#footer #right {
+footer #footer #right {
   font-style: "SourceSans";
   font-weight: 400;
   font-size: 14px;
@@ -506,16 +507,14 @@ header #header-item .nav span:hover {
 }
 
 #introductory-section {
-  width: 100%;
-  height: 330px;
+  height: 355px;
+  position: relative;
   background-image: url(/img/concentrated-young-student-woman-working-assignment-doing-homework-laptop-making-notes\ 1.svg);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: top;
 }
 #introductory-section #introductory-subsection {
-  width: 1520px;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -532,7 +531,7 @@ header #header-item .nav span:hover {
   height: 330px;
   margin: auto 0;
 }
-#introductory-section #introductory-subsection #introductory-item h1 {
+#introductory-section #introductory-subsection #introductory-item #introductory-title {
   font-family: "PlayfairDisplay";
   font-size: 36px;
 }
@@ -563,19 +562,27 @@ header #header-item .nav span:hover {
 
 #program-cards-section {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#program-cards-section #program-cards-subsection {
+  display: flex;
   flex-direction: column;
   align-items: stretch;
   flex-wrap: nowrap;
-  width: 1240px;
   margin: 0 auto;
+  margin-top: 10px;
 }
-#program-cards-section #title-our-programs {
+#program-cards-section #program-cards-subsection #title-our-programs {
   font-family: "PlayfairDisplay";
   font-size: 36px;
   width: 230px;
   margin-top: 2%;
 }
-#program-cards-section #cards-div #cards {
+#program-cards-section #program-cards-subsection #cards-div {
+  display: inline-block;
+}
+#program-cards-section #program-cards-subsection #cards-div #cards {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -583,59 +590,59 @@ header #header-item .nav span:hover {
   gap: 40px;
   margin: 40px 0;
 }
-#program-cards-section #cards-div #cards #first-row-cards,
-#program-cards-section #cards-div #cards #second-row-cards {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 120px;
 }
-#program-cards-section #cards-div #cards #first-row-cards #digital img,
-#program-cards-section #cards-div #cards #second-row-cards #digital img {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards #digital img,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards #digital img {
   -o-object-position: center 30%;
      object-position: center 30%;
 }
-#program-cards-section #cards-div #cards #first-row-cards #graphic img,
-#program-cards-section #cards-div #cards #second-row-cards #graphic img {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards #graphic img,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards #graphic img {
   -o-object-position: center 40%;
      object-position: center 40%;
 }
-#program-cards-section #cards-div #cards #first-row-cards #ux-ui img,
-#program-cards-section #cards-div #cards #second-row-cards #ux-ui img {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .ux-ui img,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .ux-ui img {
   -o-object-position: center 48%;
      object-position: center 48%;
 }
-#program-cards-section #cards-div #cards #first-row-cards #motion img,
-#program-cards-section #cards-div #cards #second-row-cards #motion img {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards #motion img,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards #motion img {
   -o-object-position: center 40%;
      object-position: center 40%;
 }
-#program-cards-section #cards-div #cards #first-row-cards #interior img,
-#program-cards-section #cards-div #cards #second-row-cards #interior img {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards #interior img,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards #interior img {
   -o-object-position: center 45%;
      object-position: center 45%;
 }
-#program-cards-section #cards-div #cards #first-row-cards #front-end img,
-#program-cards-section #cards-div #cards #second-row-cards #front-end img {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .front-end img,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .front-end img {
   -o-object-position: center 30%;
      object-position: center 30%;
 }
-#program-cards-section #cards-div #cards #first-row-cards .card-width,
-#program-cards-section #cards-div #cards #second-row-cards .card-width {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width {
   display: inline-block;
   width: 333px;
   height: 333px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   vertical-align: top;
 }
-#program-cards-section #cards-div #cards #first-row-cards .card-width .card-img-fit,
-#program-cards-section #cards-div #cards #second-row-cards .card-width .card-img-fit {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width .card-img-fit,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width .card-img-fit {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info,
-#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width .academy-info,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width .academy-info {
   background-color: rgba(217, 217, 217, 0.3019607843);
   display: flex;
   flex-direction: column;
@@ -644,15 +651,15 @@ header #header-item .nav span:hover {
   height: 50%;
   width: 100%;
 }
-#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info h1,
-#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info h1 {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width .academy-info .academies-titles,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width .academy-info .academies-titles {
   font-family: "SourceSansSemiBold";
   font-size: 18px;
   color: #089D93;
   margin-left: 20px;
 }
-#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info p,
-#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info p {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width .academy-info p,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width .academy-info p {
   font-family: "SourceSans";
   font-weight: 300;
   font-size: 14px;
@@ -660,47 +667,47 @@ header #header-item .nav span:hover {
   width: 297px;
   margin-left: 20px;
 }
-#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info span,
-#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info img,
-#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info span,
-#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info img {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width .academy-info .btn-popup,
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width .academy-info img,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width .academy-info .btn-popup,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width .academy-info img {
   font-family: "SourceSans";
   font-weight: 400;
   font-size: 14px;
   margin-left: 20px;
 }
-#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info span #blue-arrow,
-#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info img #blue-arrow,
-#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info span #blue-arrow,
-#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info img #blue-arrow {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width .academy-info .btn-popup #blue-arrow,
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width .academy-info img #blue-arrow,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width .academy-info .btn-popup #blue-arrow,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width .academy-info img #blue-arrow {
   display: none;
 }
-#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info span #black-arrow,
-#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info img #black-arrow,
-#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info span #black-arrow,
-#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info img #black-arrow {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width .academy-info .btn-popup #black-arrow,
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width .academy-info img #black-arrow,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width .academy-info .btn-popup #black-arrow,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width .academy-info img #black-arrow {
   display: inline;
   margin-left: 5px;
 }
-#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info span:hover,
-#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info img:hover,
-#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info span:hover,
-#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info img:hover {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width .academy-info .btn-popup:hover,
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width .academy-info img:hover,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width .academy-info .btn-popup:hover,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width .academy-info img:hover {
   color: #089D93;
   text-decoration: underline;
   cursor: pointer;
   transition: all 0.1s linear;
 }
-#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info span:hover #black-arrow,
-#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info img:hover #black-arrow,
-#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info span:hover #black-arrow,
-#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info img:hover #black-arrow {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width .academy-info .btn-popup:hover #black-arrow,
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width .academy-info img:hover #black-arrow,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width .academy-info .btn-popup:hover #black-arrow,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width .academy-info img:hover #black-arrow {
   display: none;
 }
-#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info span:hover #blue-arrow,
-#program-cards-section #cards-div #cards #first-row-cards .card-width .academy-info img:hover #blue-arrow,
-#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info span:hover #blue-arrow,
-#program-cards-section #cards-div #cards #second-row-cards .card-width .academy-info img:hover #blue-arrow {
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width .academy-info .btn-popup:hover #blue-arrow,
+#program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards .card-width .academy-info img:hover #blue-arrow,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width .academy-info .btn-popup:hover #blue-arrow,
+#program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards .card-width .academy-info img:hover #blue-arrow {
   display: inline;
   margin-left: 5px;
 }
@@ -716,8 +723,6 @@ header #header-item .nav span:hover {
   flex-wrap: nowrap;
   height: 530px;
   gap: 7%;
-  width: 1240px;
-  margin: 0 auto;
 }
 #testimonial-programs-section #testimonial-programs-subsection #testimonial-introductury {
   display: flex;
@@ -726,7 +731,7 @@ header #header-item .nav span:hover {
   width: 496px;
   gap: 50px;
 }
-#testimonial-programs-section #testimonial-programs-subsection #testimonial-introductury h1 {
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-introductury #students-test-title {
   font-family: "PlayfairDisplay";
   font-size: 36px;
   color: #FFFFFF;
@@ -804,8 +809,10 @@ header #header-item .nav span:hover {
 }
 
 .popups {
-  width: 1196px;
+  width: 100%;
+  max-width: 75%;
   margin: 0 auto;
+  display: none;
 }
 .popups #digital-marketing-popup,
 .popups #graphic-design-popup,
@@ -818,22 +825,30 @@ header #header-item .nav span:hover {
   align-items: flex-end;
   flex-wrap: nowrap;
 }
-.popups #digital-marketing-popup .exc-container,
-.popups #graphic-design-popup .exc-container,
-.popups #motion-graphics-popup .exc-container,
-.popups #uxui-design-popup .exc-container,
-.popups #interior-design-popup .exc-container,
-.popups #frontend-popup .exc-container {
+.popups #digital-marketing-popup .esc-container,
+.popups #graphic-design-popup .esc-container,
+.popups #motion-graphics-popup .esc-container,
+.popups #uxui-design-popup .esc-container,
+.popups #interior-design-popup .esc-container,
+.popups #frontend-popup .esc-container {
   margin-top: 25px;
   margin-right: 38px;
 }
-.popups #digital-marketing-popup .exc-container .exc-btn,
-.popups #graphic-design-popup .exc-container .exc-btn,
-.popups #motion-graphics-popup .exc-container .exc-btn,
-.popups #uxui-design-popup .exc-container .exc-btn,
-.popups #interior-design-popup .exc-container .exc-btn,
-.popups #frontend-popup .exc-container .exc-btn {
+.popups #digital-marketing-popup .esc-container .esc-btn,
+.popups #graphic-design-popup .esc-container .esc-btn,
+.popups #motion-graphics-popup .esc-container .esc-btn,
+.popups #uxui-design-popup .esc-container .esc-btn,
+.popups #interior-design-popup .esc-container .esc-btn,
+.popups #frontend-popup .esc-container .esc-btn {
   padding-right: 6px;
+}
+.popups #digital-marketing-popup .esc-container .esc-btn:hover,
+.popups #graphic-design-popup .esc-container .esc-btn:hover,
+.popups #motion-graphics-popup .esc-container .esc-btn:hover,
+.popups #uxui-design-popup .esc-container .esc-btn:hover,
+.popups #interior-design-popup .esc-container .esc-btn:hover,
+.popups #frontend-popup .esc-container .esc-btn:hover {
+  cursor: pointer;
 }
 .popups #digital-marketing-popup .academy-popup,
 .popups #graphic-design-popup .academy-popup,
@@ -869,24 +884,25 @@ header #header-item .nav span:hover {
   height: 326px;
   width: 467px;
 }
-.popups #digital-marketing-popup .academy-popup .academy-container .academy-text span,
-.popups #graphic-design-popup .academy-popup .academy-container .academy-text span,
-.popups #motion-graphics-popup .academy-popup .academy-container .academy-text span,
-.popups #uxui-design-popup .academy-popup .academy-container .academy-text span,
-.popups #interior-design-popup .academy-popup .academy-container .academy-text span,
-.popups #frontend-popup .academy-popup .academy-container .academy-text span {
+.popups #digital-marketing-popup .academy-popup .academy-container .academy-text .focus,
+.popups #graphic-design-popup .academy-popup .academy-container .academy-text .focus,
+.popups #motion-graphics-popup .academy-popup .academy-container .academy-text .focus,
+.popups #uxui-design-popup .academy-popup .academy-container .academy-text .focus,
+.popups #interior-design-popup .academy-popup .academy-container .academy-text .focus,
+.popups #frontend-popup .academy-popup .academy-container .academy-text .focus {
   font-family: "SourceSans";
   font-weight: 400;
   font-size: 18px;
   text-transform: uppercase;
 }
-.popups #digital-marketing-popup .academy-popup .academy-container .academy-text h1,
-.popups #graphic-design-popup .academy-popup .academy-container .academy-text h1,
-.popups #motion-graphics-popup .academy-popup .academy-container .academy-text h1,
-.popups #uxui-design-popup .academy-popup .academy-container .academy-text h1,
-.popups #interior-design-popup .academy-popup .academy-container .academy-text h1,
-.popups #frontend-popup .academy-popup .academy-container .academy-text h1 {
+.popups #digital-marketing-popup .academy-popup .academy-container .academy-text .academy-title,
+.popups #graphic-design-popup .academy-popup .academy-container .academy-text .academy-title,
+.popups #motion-graphics-popup .academy-popup .academy-container .academy-text .academy-title,
+.popups #uxui-design-popup .academy-popup .academy-container .academy-text .academy-title,
+.popups #interior-design-popup .academy-popup .academy-container .academy-text .academy-title,
+.popups #frontend-popup .academy-popup .academy-container .academy-text .academy-title {
   font-family: "PlayfairDisplay";
+  font-weight: 400;
   font-size: 36px;
 }
 .popups #digital-marketing-popup .academy-popup .academy-container .academy-text p,
@@ -915,13 +931,15 @@ header #header-item .nav span:hover {
   flex-wrap: nowrap;
   height: 196px;
   background-color: rgba(217, 217, 217, 0.3019607843);
+  padding: 35px;
+  gap: 12px;
 }
-.popups #digital-marketing-popup .overview h1,
-.popups #graphic-design-popup .overview h1,
-.popups #motion-graphics-popup .overview h1,
-.popups #uxui-design-popup .overview h1,
-.popups #interior-design-popup .overview h1,
-.popups #frontend-popup .overview h1 {
+.popups #digital-marketing-popup .overview .overview-title,
+.popups #graphic-design-popup .overview .overview-title,
+.popups #motion-graphics-popup .overview .overview-title,
+.popups #uxui-design-popup .overview .overview-title,
+.popups #interior-design-popup .overview .overview-title,
+.popups #frontend-popup .overview .overview-title {
   font-family: "PlayfairDisplay";
   font-size: 24px;
 }
@@ -965,12 +983,12 @@ header #header-item .nav span:hover {
   flex-wrap: nowrap;
   height: 256px;
 }
-.popups #digital-marketing-popup .highlights .highlights-text h1,
-.popups #graphic-design-popup .highlights .highlights-text h1,
-.popups #motion-graphics-popup .highlights .highlights-text h1,
-.popups #uxui-design-popup .highlights .highlights-text h1,
-.popups #interior-design-popup .highlights .highlights-text h1,
-.popups #frontend-popup .highlights .highlights-text h1 {
+.popups #digital-marketing-popup .highlights .highlights-text .highlights-title,
+.popups #graphic-design-popup .highlights .highlights-text .highlights-title,
+.popups #motion-graphics-popup .highlights .highlights-text .highlights-title,
+.popups #uxui-design-popup .highlights .highlights-text .highlights-title,
+.popups #interior-design-popup .highlights .highlights-text .highlights-title,
+.popups #frontend-popup .highlights .highlights-text .highlights-title {
   font-family: "PlayfairDisplay";
   font-size: 24px;
 }
@@ -1059,12 +1077,12 @@ header #header-item .nav span:hover {
   box-shadow: 0 0 0 5px #62A1A4;
   margin-left: 3px;
 }
-.popups #digital-marketing-popup .highlights .highlights-icons .icon h1,
-.popups #graphic-design-popup .highlights .highlights-icons .icon h1,
-.popups #motion-graphics-popup .highlights .highlights-icons .icon h1,
-.popups #uxui-design-popup .highlights .highlights-icons .icon h1,
-.popups #interior-design-popup .highlights .highlights-icons .icon h1,
-.popups #frontend-popup .highlights .highlights-icons .icon h1 {
+.popups #digital-marketing-popup .highlights .highlights-icons .icon .icons-title,
+.popups #graphic-design-popup .highlights .highlights-icons .icon .icons-title,
+.popups #motion-graphics-popup .highlights .highlights-icons .icon .icons-title,
+.popups #uxui-design-popup .highlights .highlights-icons .icon .icons-title,
+.popups #interior-design-popup .highlights .highlights-icons .icon .icons-title,
+.popups #frontend-popup .highlights .highlights-icons .icon .icons-title {
   font-family: "SourceSans";
   font-weight: 400;
   font-size: 18px;
@@ -1094,6 +1112,8 @@ header #header-item .nav span:hover {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: nowrap;
+  gap: 30px;
+  padding: 15px 0;
 }
 .popups #digital-marketing-popup .pricing .price-text,
 .popups #graphic-design-popup .pricing .price-text,
@@ -1122,12 +1142,12 @@ header #header-item .nav span:hover {
   color: #089D93;
   text-transform: uppercase;
 }
-.popups #digital-marketing-popup .pricing h1,
-.popups #graphic-design-popup .pricing h1,
-.popups #motion-graphics-popup .pricing h1,
-.popups #uxui-design-popup .pricing h1,
-.popups #interior-design-popup .pricing h1,
-.popups #frontend-popup .pricing h1 {
+.popups #digital-marketing-popup .pricing .future-title,
+.popups #graphic-design-popup .pricing .future-title,
+.popups #motion-graphics-popup .pricing .future-title,
+.popups #uxui-design-popup .pricing .future-title,
+.popups #interior-design-popup .pricing .future-title,
+.popups #frontend-popup .pricing .future-title {
   font-family: "PlayfairDisplay";
   font-size: 24px;
 }
@@ -1429,4 +1449,44 @@ header #header-item .nav span:hover {
   border: 1px solid #089D93;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7294117647);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  display: none;
+}
+
+.popup-open {
+  position: fixed;
+  top: 0;
+  background: #FFFFFF;
+  z-index: 41;
+  display: flex;
+  max-height: 90dvh;
+  overflow: auto;
+  margin-top: 5dvh;
+}
+
+.display-block {
+  display: block !important;
+}
+
+.display-flex {
+  display: flex !important;
+  flex-direction: column;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1584px);
+  }
 }/*# sourceMappingURL=main.css.map */

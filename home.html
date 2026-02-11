@@ -29,13 +29,13 @@
     <main>
         <div id="hero-section">
             <div id="hero-item1">
-                <video src="https://video.wixstatic.com/video/c1a072_317f3fcc97c440fab09b475aefa723b4/1080p/mp4/file.mp4" controls poster="/img/iq-screen.svg" width="560" height="350"></video>
-                <!-- <img id="playBtn" src="/img/play-stop-btn.svg" alt="play/stop btn" width="21" height="24.25">
-                <img src="img/iq-screen.svg" alt="video" width="560" height="350"> -->
+                <!-- <video src="https://video.wixstatic.com/video/c1a072_317f3fcc97c440fab09b475aefa723b4/1080p/mp4/file.mp4" controls poster="/img/iq-screen.svg" width="560" height="350"></video> -->
+                <img id="playBtn" src="/img/play-stop-btn.svg" alt="play/stop btn" width="21" height="24.25">
+                <img src="img/iq-screen.svg" alt="video">
             </div>
             <div id="hero-item2">
                 <span>Our Mission: Excellence in education</span>
-                <h1>IQ Online Academy</h1>
+                <span id="hero-title">IQ Online Academy</span>
                 <p>We provide globally recognized certification, expert mentorship, and practical training to prepare
                     professionals for success in today’s evolving digital and creative industries.</p>
                 <button class="btn">Enroll Now</button>
@@ -43,7 +43,7 @@
         </div>
         <div id="subscribe-section">
             <div id="subscribe-subsection">
-                <h1>Never Miss an Opportunity to Learn and Grow</h1>
+                <span id="subscribe-title">Never Miss an Opportunity to Learn and Grow</span>
                 <p>Subscribe to our mailing list and be the first to hear about new programs, enrollment deadlines,
                     exclusive learning resources, and career opportunities from the International Online Learning
                     Academy
@@ -55,67 +55,67 @@
             </div>
         </div>
         <div id="programs-section">
-            <h1>Explore Our Programs</h1>
+            <span id="programs-title">Explore Our Programs</span>
             <p>Explore accredited courses designed to equip you with practical skills, global certification, and real
                 career opportunities.</p>
             <div id="academy-align">
-                <button id="left-slide"><img src="/img/Chevron Left.svg" alt="previous" width="50" height="50"></button>
+                <button id="left-slide"><img src="/img/Chevron Left.svg" alt="previous" height="50"></button>
                 <div class="academy-sections">
 
                     <div class="page">
-                        <div class="academies first-page">
+                        <div id="digital-marketing" class="academies first-page popup-block" > 
                         <img src="/img/digital-marketing-img.svg" alt="digital marketing" width="333" height="333">
-                        <h2>Digital Marketing Academy</h2>
+                        <span class="program-titles">Digital Marketing Academy</span>
                         <p>Learn the strategies and tools that drive modern businesses online, with hands-on projects
                             and industry mentorship.</p>
-                        <button class="btn btn-popup" id="digital-pop">Learn More</button>
+                        <button class="btn btn-popup" id="digital-pop" data-popup="digital-marketing-popup">Learn More</button>
                         </div>
-                        <div class="academies first-page">
+                        <div id="graphic-design" class="academies first-page popup-block">
                         <img src="img/graphic-design-img.svg" alt="graphic design" width="335" height="333">
-                        <h2>Graphic Design Academy</h2>
+                        <span class="program-titles">Graphic Design Academy</span>
                         <p>Develop creative and technical skills using industry tools to build a professional design
                             portfolio.</p>
-                        <button class="btn btn-popup" id="graphic-pop">Learn More</button>
+                        <button class="btn btn-popup" id="graphic-pop" data-popup="graphic-design-popup">Learn More</button>
                         </div>
-                        <div class="academies first-page">
+                        <div id="uxui-design" class="academies first-page popup-block">
                         <img src="/img/ux-ui-img.svg" alt="ux/ui design" width="333" height="333">
-                        <h2>UX/UI Academy</h2>
+                        <span class="program-titles">UX/UI Academy</span>
                         <p>Learn how to design user-friendly digital experiences through research, prototyping, and
                             real-world case studies.</p>
-                        <button class="btn btn-popup" id="uxui-pop">Learn More</button>
+                        <button class="btn btn-popup" id="uxui-pop" data-popup="uxui-design-popup">Learn More</button>
                         </div>
                     </div>
                     
                     <div class="page">
-                        <div class="academies second-page">
+                        <div id="motion-graphics" class="academies second-page popup-block">
                         <img src="/img/motion-graphics-img.svg" alt="motion graphic" width="333" height="333">
-                        <h2>Motion Graphics Academy </h2>
+                        <span class="program-titles">Motion Graphics Academy </span>
                         <p>Master the art of visual storytelling through animation, design, and motion techniques that
                             bring ideas to life.</p>
-                        <button class="btn btn-popup" id="motion-pop">Learn More</button>
+                        <button class="btn btn-popup" id="motion-pop" data-popup="motion-graphics-popup">Learn More</button>
                         </div>
-                        <div class="academies second-page">
+                        <div id="interior-design" class="academies second-page popup-block">
                         <img src="/img/interior-design-img.svg" alt="interior design" width="333" height="334">
-                        <h2>Interior Design Academy</h2>
+                        <span class="program-titles">Interior Design Academy</span>
                         <p>Learn how to create functional, stylish, and inspiring spaces with practical design skills
                             and professional guidance.</p>
-                        <button class="btn btn-popup" id="interior-pop">Learn More</button>
+                        <button class="btn btn-popup" id="interior-pop" data-popup="interior-design-popup">Learn More</button>
                         </div>
-                        <div class="academies second-page">
+                        <div id="frontend" class="academies second-page popup-block">
                         <img src="/img/front-end-img.svg" alt="front end" width="333" height="334">
-                        <h2>Front-End Academy</h2>
+                        <span class="program-titles">Front-End Academy</span>
                         <p>Build modern, responsive, and user-friendly websites by developing hands-on coding and design
                             expertise.</p>
-                        <button class="btn btn-popup" id="frontend-pop">Learn More</button>
+                        <button class="btn btn-popup" id="frontend-pop" data-popup="frontend-popup">Learn More</button>
                         </div>
                     </div>
                    
                 </div>
-                <button id="right-slide"><img src="/img/Chevron Right.svg" alt="next" width="50" height="50"></button>
+                <button id="right-slide"><img src="/img/Chevron Right.svg" alt="next"height="50"></button>
             </div>
         </div>
         <div id="testimonial-section">
-            <h1>Student Testimonial</h1>
+            <span id="testimonial-title">Student Testimonial</span>
             <div class="content-slider">
                 <button class="left"><img src="/img/Chevron Left.svg" alt="prvious" width="50" height="50"></button>
                 <div class="slider-container">
@@ -148,7 +148,7 @@
         </div>
         <div id="partners-section">
             <div id="partners-subsection">
-                <h1>Our Partners</h1>
+                <span id="partners-title">Our Partners</span>
                 <div id="partner-track">
                     <div class="img-partner">
                         <img src="/img/storyland.svg" alt="partner" width="132" height="140">
@@ -192,19 +192,19 @@
         <div id="journey-section">
             <div id="journey-subsection">
                 <div id="journey-item">
-                    <h1>Ready to start your journey?</h1>
+                    <span id="journey-title">Ready to start your journey?</span>
                     <p>Don’t miss your chance to join the next intake. Spaces are limited.</p>
                     <button class="btn">Enroll Now</button>
                 </div>
                 <div id="video">
-                    <video src="https://video.wixstatic.com/video/c1a072_3059151fd28c47239f8a0a8c883255c9/720p/mp4/file.mp4" controls poster="/img/journey-screen.svg" width="560" height="350"></video>
-                    <!-- <img id="playImg" src="/img/journey-screen.svg" alt="journey video" width="561" height="350"> -->
-                    <!-- <img id="play" src="/img/play-stop-btn.svg" alt="play/stop btn" width="21" height="24.25"> -->
+                    <!-- <video src="https://video.wixstatic.com/video/c1a072_3059151fd28c47239f8a0a8c883255c9/720p/mp4/file.mp4" controls poster="/img/journey-screen.svg" width="560" height="350"></video> -->
+                    <img id="playImg" src="/img/journey-screen.svg" alt="journey video">
+                    <img id="play" src="/img/play-stop-btn.svg" alt="play/stop btn" width="21" height="24.25">
                 </div>
-
             </div>
-
         </div>
+        <div class="overlay"></div>
+        <div class="popups"></div>
     </main>
     <footer>
         <div id="footer">
@@ -221,7 +221,7 @@
                     </div>
                 </div>
                 <div class="contact">
-                    <h1>Contact Us</h1>
+                    <span class="contactus-title">Contact Us</span>
                     <p>info@iqonlineacademy.com</p>
                     <p>Bul. Partizanski Odredi 52-1/10 1000, Skopje</p>
                     <p>+389 70 65 16 65</p>
@@ -230,7 +230,7 @@
             <p id="right">© All Rights Reserved IQ Online Academy 2025</p>
         </div>
     </footer>
-    <script src="main.js" defer></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
