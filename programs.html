@@ -10,19 +10,47 @@
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <div id="header-item">
             <nav class="nav">
                 <span id="home">Home</span>
                 <span>About</span>
                 <span id="programs">Programs</span>
             </nav>
-            <a href="/"><img src="img/logo.svg" alt="logo" width="113" height="77"></a>
+            <a class="logo-menu" href="/"><img src="img/logo.svg" alt="logo" width="113" height="77"></a>
             <nav class="nav">
                 <span>Instructors</span>
                 <span>Contact</span>
                 <span>Blog</span>
             </nav>
+        </div>
+    </header> -->
+    <header>
+        <div id="header-item">
+            <nav class="nav left-nav">
+                <span id="home">Home</span>
+                <span>About</span>
+                <span id="programs">Programs</span>
+            </nav>
+
+            <a class="logo-menu" href="/"><img src="img/logo.svg" alt="logo" width="113" height="77"></a>
+            <nav class="nav right-nav">
+                <span>Instructors</span>
+                <span>Contact</span>
+                <span>Blog</span>
+            </nav>
+
+            <div class="mobile-menu mobileMenu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="#instructors">Instructors</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+
         </div>
     </header>
     <main>
@@ -325,7 +353,7 @@
                                 powerful visual identities.</p>
                             <button class="btn">Enroll Now</button>
                         </div>
-                        <img src="/img/graphic-design-img.svg" alt="" width="499" height="326">
+                        <img id="graphic-design-popup-img" src="/img/graphic-popup.svg" alt="" width="449" height="326">
                     </div>
                 </div>
                 <div class="overview">
@@ -877,17 +905,17 @@
             <div class="footer-items">
                 <div class="logos">
                     <div id="logo">
-                        <img src="/img/logo.svg" alt="iq acaddemy logo" width="135" height="92">
-                        <img src="/img/cpd-logo.svg" alt="cpd logo" width="91" height="92">
+                        <img id="logoImg" src="img/logo.svg" alt="iq acaddemy logo" width="135" height="92">
+                        <img id="cpdImg" src="img/cpd-logo.svg" alt="cpd logo" width="91" height="92">
                     </div>
                     <div id="socials">
-                        <img id="fb" src="/img/facebook.svg" alt="facebook link" width="32.5" height="32.5">
-                        <img id="ig" src="/img/instagram.svg" alt="instagram link" width="32.5" height="32.5">
-                        <img id="in" src="/img/linkedin.svg" alt="linkedin link" width="32.5" height="32.5">
+                        <img id="fb" src="img/facebook.svg" alt="facebook link" width="32.5" height="32.5">
+                        <img id="ig" src="img/instagram.svg" alt="instagram link" width="32.5" height="32.5">
+                        <img id="in" src="img/linkedin.svg" alt="linkedin link" width="32.5" height="32.5">
                     </div>
                 </div>
                 <div class="contact">
-                    <span  class="contactus-title">Contact Us</span>
+                    <span class="contactus-title">Contact Us</span>
                     <p>info@iqonlineacademy.com</p>
                     <p>Bul. Partizanski Odredi 52-1/10 1000, Skopje</p>
                     <p>+389 70 65 16 65</p>

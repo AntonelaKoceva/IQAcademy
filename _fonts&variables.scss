@@ -1,36 +1,36 @@
 @font-face{
     font-family: "PlayfairDisplay";
-    src: url(/fonts/PlayfairDisplay-Regular.woff2);
+    src: url(../fonts/PlayfairDisplay-Regular.woff2);
     font-weight: 400;
 }
 @font-face{
     font-family: "PlayfairDisplayBold";
-    src: url(/fonts/PlayfairDisplay-Bold.woff2);
+    src: url(../fonts/PlayfairDisplay-Bold.woff2);
     font-weight: 700;
 }
 @font-face{
     font-family: "SourceSans";
-    src: url(/fonts/SourceSansPro-Regular.woff2);
+    src: url(../fonts/SourceSansPro-Regular.woff2);
     font-weight: 400;
 }
 @font-face{
     font-family: "SourceSans";
-    src: url(/fonts/SourceSansPro-Light.woff2);
+    src: url(../fonts/SourceSansPro-Light.woff2);
     font-weight: 300;
 }
 @font-face{
     font-family: "SourceSansI";
-    src: url(/fonts/SourceSansPro-It.woff2);
+    src: url(../fonts/SourceSansPro-It.woff2);
     font-weight: 400;
 }
 @font-face{
     font-family: "Domine";
-    src: url(/fonts/Domine-Regular.woff2);
+    src: url(../fonts/Domine-Regular.woff2);
     font-weight: 400;
 }
 @font-face{
     font-family: "SourceSansSemiBold";
-    src: url(/fonts/SourceSansPro-SemiBold.woff2);
+    src: url(../fonts/SourceSansPro-SemiBold.woff2);
     font-weight: 600;
 }
 
@@ -41,7 +41,7 @@ $font-ssI: "SourceSansI";
 $font-domine: "Domine";
 $font-ssSB: "SourceSansSemiBold";
 
-$breakpoints:("xs": 420px,
+$grid-breakpoints:("xs": 420px,
   "s":560px,
   "m": 768px,
   "l": 1024px,

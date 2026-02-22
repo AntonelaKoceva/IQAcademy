@@ -1,22 +1,22 @@
 @use "sass:math";
 
 //functions for responsive mixins
-@function breakpoint-next($name, $breakpoints: $breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
   $n: index($breakpoint-names, $name);
   @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
 }
 
-@function breakpoint-min($name, $breakpoints: $breakpoints) {
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
   $min: map-get($breakpoints, $name);
   @return if($min !=0, $min, null);
 }
 
-@function breakpoint-max($name, $breakpoints: $breakpoints) {
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
   $next: breakpoint-next($name, $breakpoints);
   @return if($next, breakpoint-min($next, $breakpoints) - .02px, null);
 }
 
-@function breakpoint-infix($name, $breakpoints: $breakpoints) {
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
   @return if(breakpoint-min($name, $breakpoints)==null, '', '#{$name}');
 }
 
@@ -24,7 +24,7 @@
 // ------------------
 // Responsive mixins
 // -------------------
-@mixin media-up($name, $breakpoints: $breakpoints) {
+@mixin media-up($name, $breakpoints: $grid-breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
 
   @if $min {
@@ -39,7 +39,7 @@
   }
 }
 
-@mixin media-down($name, $breakpoints: $breakpoints) {
+@mixin media-down($name, $breakpoints: $grid-breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
   $current: map-get($breakpoints, $name);
   $current-max: $current - .02px;
@@ -56,7 +56,7 @@
   }
 }
 
-@mixin media-between($lower, $upper, $breakpoints: $breakpoints) {
+@mixin media-between($lower, $upper, $breakpoints: $grid-breakpoints) {
   $min: breakpoint-min($lower, $breakpoints);
   $max: breakpoint-max($upper, $breakpoints);
   $current-upper: map-get($breakpoints, $upper);

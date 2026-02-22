@@ -68,7 +68,7 @@ leftBtn?.addEventListener("click", () => {
     showSlide(current);
 });
 
-//programs
+programs
 const pages = document.querySelectorAll(".page");
 const leftB = document.getElementById("left-slide");
 const rightB = document.getElementById("right-slide");
@@ -90,14 +90,14 @@ leftB?.addEventListener("click", () => {
   showPage(prevPage);
 });
 
-  
-//popups
-    const btnPopup = document.querySelectorAll(".btn-popup");
-    const popup = document.querySelector(".popups");
-    const overlay = document.querySelector(".overlay");
 
-    btnPopup &&
-      btnPopup.forEach((item) => {
+//popups
+const btnPopup = document.querySelectorAll(".btn-popup");
+const popup = document.querySelector(".popups");
+const overlay = document.querySelector(".overlay");
+
+btnPopup &&
+  btnPopup.forEach((item) => {
         item.addEventListener("click", function () {
           document
   .querySelectorAll(".popup-block")
@@ -195,9 +195,8 @@ leftB?.addEventListener("click", () => {
           }
 
         });
-      });
+  });
 
-  
 const popupBlock = document.querySelectorAll(".popup-block");
 function closePopup(){
     popup?.classList.remove("display-flex");
@@ -212,9 +211,7 @@ function popupClose(){
     item.addEventListener("click", closePopup)
 })
 }
-
 overlay.addEventListener("click", closePopup)
-
 let popupsLoaded = false;
 function loadPopups() {
   if (popupsLoaded) return;
@@ -234,3 +231,145 @@ function loadPopups() {
       popupsLoaded = true;
     });
 }
+
+
+//menu - responsive
+const logo=document.querySelector(".logo-menu");
+const mobileMenu=document.querySelector(".mobile-menu");
+logo?.addEventListener("click", (e) =>{
+  e.preventDefault();
+  mobileMenu?.classList.toggle("open");
+  // console.log(logo)
+})
+
+//program - responsive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//programs
+// document.addEventListener('DOMContentLoaded', () => {
+//   const swiper = new Swiper('.swipe-programs', {  // твојата класа .swipe-programs
+//     // Основни поставки
+//     slidesPerView: 1,            // default: 1 карта (за мобилен)
+//     slidesPerGroup: 1,           // поместување по 1
+//     spaceBetween: 20,            // простор помеѓу карти
+//     loop: false,                 // без бесконечен циклус (можеш да ставиш true ако сакаш да се враќа)
+//     speed: 600,                  // smooth анимација (600ms)
+
+//     // Навигација – твоите копчиња
+//     navigation: {
+//       nextEl: '#right-slide',    // твоето десно копче
+//       prevEl: '#left-slide',     // твоето лево копче
+//     },
+
+//     // Точки долу
+//     pagination: {
+//       el: '.swipe-dots',         // твојот .swipe-dots
+//       clickable: true,           // можеш да кликнеш на точка за да оди директно
+//       dynamicBullets: true,      // точките се менуваат динамички
+//     },
+
+//     // Responsive: прилагодување според екран
+//     breakpoints: {
+//       419: {                     // за таблети (~2 карти)
+//         slidesPerView: 1,
+//         slidesPerGroup: 1,
+//         spaceBetween: 30,
+//       },
+//       420: {                    // за desktop (3 карти)
+//         slidesPerView: 3,
+//         slidesPerGroup: 3,       // поместување по 3 – скриј 3, покажи 3
+//         spaceBetween: 40,
+//       },
+//     },
+//   });
+// });
+
+// const slider = document.querySelector('.swipe-programs');
+// const wrapper = document.querySelector('.swipe-wrapper');
+// const items = document.querySelectorAll('.swipe-item');
+// const prevBtn = document.getElementById('left-slide');
+// const nextBtn = document.getElementById('right-slide');
+
+// const itemsPerPage = 3;
+// const totalPages = Math.ceil(items.length / itemsPerPage);
+
+// let currentPage = 0;
+
+// function setPosition(animate = true) {
+//     const sliderWidth = slider.clientWidth;
+//     wrapper.style.transition = animate ? 'transform 0.4s ease' : 'none';
+//     wrapper.style.transform = `translateX(-${currentPage * sliderWidth}px)`;
+// }
+
+// // RIGHT
+// nextBtn.addEventListener('click', () => {
+//     if (currentPage === totalPages - 1) {
+//         // teleport to first
+//         currentPage = 0;
+//         setPosition(false);
+
+//         // ⬇️ ВАЖНО: враќање на animation во следниот frame
+//         requestAnimationFrame(() => {
+//             requestAnimationFrame(() => {
+//                 setPosition(true);
+//             });
+//         });
+//     } else {
+//         currentPage++;
+//         setPosition(true);
+//     }
+// });
+
+// // LEFT
+// prevBtn.addEventListener('click', () => {
+//     if (currentPage === 0) {
+//         // teleport to last
+//         currentPage = totalPages - 1;
+//         setPosition(false);
+
+//         requestAnimationFrame(() => {
+//             requestAnimationFrame(() => {
+//                 setPosition(true);
+//             });
+//         });
+//     } else {
+//         currentPage--;
+//         setPosition(true);
+//     }
+// });
+
+// window.addEventListener('resize', () => setPosition(false));
+
+// // rightB?.addEventListener("click", () => {
+// //   const nextPage = (currentPage + 1) % pages.length;
+// //   showPage(nextPage);
+// // });
+
+// // leftB?.addEventListener("click", () => {
+// //   const prevPage = (currentPage - 1 + pages.length) % pages.length;
+// //   showPage(prevPage);
+// // });

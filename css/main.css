@@ -1,38 +1,3 @@
-@font-face {
-  font-family: "PlayfairDisplay";
-  src: url(/fonts/PlayfairDisplay-Regular.woff2);
-  font-weight: 400;
-}
-@font-face {
-  font-family: "PlayfairDisplayBold";
-  src: url(/fonts/PlayfairDisplay-Bold.woff2);
-  font-weight: 700;
-}
-@font-face {
-  font-family: "SourceSans";
-  src: url(/fonts/SourceSansPro-Regular.woff2);
-  font-weight: 400;
-}
-@font-face {
-  font-family: "SourceSans";
-  src: url(/fonts/SourceSansPro-Light.woff2);
-  font-weight: 300;
-}
-@font-face {
-  font-family: "SourceSansI";
-  src: url(/fonts/SourceSansPro-It.woff2);
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Domine";
-  src: url(/fonts/Domine-Regular.woff2);
-  font-weight: 400;
-}
-@font-face {
-  font-family: "SourceSansSemiBold";
-  src: url(/fonts/SourceSansPro-SemiBold.woff2);
-  font-weight: 600;
-}
 * {
   margin: 0;
   padding: 0;
@@ -60,6 +25,41 @@ a:visited {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url(../fonts/PlayfairDisplay-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "PlayfairDisplayBold";
+  src: url(../fonts/PlayfairDisplay-Bold.woff2);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "SourceSans";
+  src: url(../fonts/SourceSansPro-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SourceSans";
+  src: url(../fonts/SourceSansPro-Light.woff2);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "SourceSansI";
+  src: url(../fonts/SourceSansPro-It.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Domine";
+  src: url(../fonts/Domine-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SourceSansSemiBold";
+  src: url(../fonts/SourceSansPro-SemiBold.woff2);
+  font-weight: 600;
+}
 .btn {
   border-radius: 4px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -103,6 +103,60 @@ header #header-item .nav span:hover {
   cursor: pointer;
   -webkit-text-decoration: underline #089D93;
           text-decoration: underline #089D93;
+}
+header #header-item .mobile-menu {
+  display: none;
+}
+@media (max-width: 419.98px) {
+  header #header-item {
+    justify-content: center;
+    padding: 12px 16px;
+  }
+  header #header-item .left-nav,
+  header #header-item .right-nav {
+    display: none;
+  }
+  header #header-item .mobile-menu {
+    position: absolute;
+    top: 17%;
+    left: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    color: #000000;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 1000;
+    padding: 32px 16px;
+    display: block;
+  }
+  header #header-item .mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  header #header-item .mobile-menu ul li {
+    text-align: center;
+    font-size: 18px;
+  }
+  header #header-item .mobile-menu ul li a {
+    color: #62A1A4;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+  header #header-item .mobile-menu ul li a:hover, header #header-item .mobile-menu ul li a:focus {
+    cursor: pointer;
+  }
+  header #header-item .mobile-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 #hero-section {
@@ -150,6 +204,39 @@ header #header-item .nav span:hover {
 }
 #hero-section #hero-item2 .enroll-btn {
   margin-bottom: -20px;
+}
+@media (max-width: 419.98px) {
+  #hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    min-height: 50dvh;
+    gap: 0;
+    margin: 30px 0;
+  }
+  #hero-section #hero-item1 {
+    margin: 0;
+  }
+  #hero-section #hero-item1 #iqImg {
+    max-width: 100%;
+    padding: 0 35px;
+  }
+  #hero-section #hero-item2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 5px;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+  #hero-section #hero-item2 p {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 #subscribe-section {
@@ -199,6 +286,39 @@ header #header-item .nav span:hover {
   font-weight: 400;
   font-size: 14px;
 }
+@media (max-width: 419.98px) {
+  #subscribe-section {
+    margin-top: 0;
+    min-height: 40dvh;
+  }
+  #subscribe-section #subscribe-subsection {
+    height: auto;
+    justify-content: space-evenly;
+    margin-top: 0;
+    padding: 20px 0;
+    gap: 15px;
+  }
+  #subscribe-section #subscribe-subsection #subscribe-title {
+    text-align: center;
+    width: 90%;
+  }
+  #subscribe-section #subscribe-subsection p {
+    width: 90%;
+  }
+  #subscribe-section #subscribe-subsection #subscribe-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 100px;
+  }
+  #subscribe-section #subscribe-subsection #subscribe-item input {
+    width: 60vw;
+    margin-right: 0;
+    padding: 10px 0;
+  }
+}
 
 #programs-section {
   display: flex;
@@ -217,6 +337,9 @@ header #header-item .nav span:hover {
   font-weight: 400;
   font-size: 24px;
   text-align: center;
+}
+#programs-section #carousel-wrapper {
+  display: none;
 }
 #programs-section #academy-align {
   display: flex;
@@ -288,18 +411,68 @@ header #header-item .nav span:hover {
   font-weight: 300;
   font-size: 18px;
 }
+#programs-section #academy-align .academy-sections .academies1 {
+  display: none;
+}
 @media (max-width: 419.98px) {
   #programs-section #academy-align {
-    width: 0;
-    background-color: red;
+    display: none;
   }
-  #programs-section #academy-align .academy-sections {
-    margin: 0;
-    margin-top: 60px;
-    margin-bottom: 60px;
+  #programs-section #carousel-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    min-width: 100dvw;
+    width: 100%;
   }
-  #programs-section #academy-align .academy-sections .page {
-    width: 100vw;
+  #programs-section #carousel-wrapper .carousel-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    overflow: hidden;
+  }
+  #programs-section #carousel-wrapper .carousel-inner .carousel-items {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  #programs-section #carousel-wrapper .carousel-inner .carousel-items::-webkit-scrollbar {
+    display: none;
+  }
+  #programs-section #carousel-wrapper .carousel-inner .carousel-items .carousel-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 15px;
+    padding: 15px 0;
+    width: 100%;
+    flex: 0 0 50%;
+    scroll-snap-align: center;
+  }
+  #programs-section #carousel-wrapper .carousel-inner .carousel-items .carousel-card img {
+    border-radius: 4px;
+    width: 310px;
+  }
+  #programs-section #carousel-wrapper .carousel-inner .carousel-items .carousel-card .program-titles {
+    font-family: "SourceSans";
+    font-weight: 400;
+    font-size: 24px;
+  }
+  #programs-section #carousel-wrapper .carousel-inner .carousel-items .carousel-card p {
+    width: 323px;
+    text-align: center;
+    font-family: "SourceSans";
+    font-weight: 300;
+    font-size: 18px;
   }
 }
 
@@ -317,6 +490,7 @@ header #header-item .nav span:hover {
   font-family: "PlayfairDisplay";
   font-weight: 400;
   font-size: 36px;
+  text-align: center;
 }
 #testimonial-section .content-slider {
   display: flex;
@@ -379,6 +553,30 @@ header #header-item .nav span:hover {
   font-size: 24px;
   text-align: center;
 }
+@media (max-width: 419.98px) {
+  #testimonial-section {
+    justify-content: space-evenly;
+    min-height: 90dvh;
+    padding-top: 20px;
+    padding-bottom: 0;
+    gap: 0;
+  }
+  #testimonial-section .content-slider {
+    width: 100dvw;
+  }
+  #testimonial-section .content-slider .slider-container {
+    width: 100%;
+    max-width: 100dvw;
+    margin: 0 auto;
+    min-height: 75dvh;
+    overflow: visible;
+  }
+  #testimonial-section .content-slider .slider-container .slide {
+    width: 100%;
+    max-width: 100dvw;
+    margin: 0 auto;
+  }
+}
 
 #partners-section {
   margin: 0 auto;
@@ -411,6 +609,14 @@ header #header-item .nav span:hover {
   flex-wrap: nowrap;
   padding: 15px 10px;
   margin: 0 30px;
+}
+@media (max-width: 419.98px) {
+  #partners-section #partner-track {
+    width: 100%;
+  }
+  #partners-section #partner-track .img-partner {
+    margin: 0;
+  }
 }
 
 #journey-section {
@@ -452,6 +658,36 @@ header #header-item .nav span:hover {
   position: absolute;
   right: 47%;
   top: 45%;
+}
+@media (max-width: 419.98px) {
+  #journey-section {
+    min-height: 50dvh;
+    max-height: 100dvh;
+  }
+  #journey-section #journey-subsection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: 100%;
+  }
+  #journey-section #journey-subsection #journey-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+  #journey-section #journey-subsection #journey-item #journey-title {
+    text-align: center;
+    padding-top: 30px;
+  }
+  #journey-section #journey-subsection #journey-item p {
+    width: 100%;
+  }
+  #journey-section #journey-subsection #video #playImg {
+    max-width: 80dvw;
+  }
 }
 
 footer #footer {
@@ -504,6 +740,58 @@ footer #footer #right {
   font-weight: 400;
   font-size: 14px;
   margin: 15px 0;
+}
+@media (max-width: 419.98px) {
+  footer #footer {
+    width: 100%;
+    max-width: 100dvw;
+    margin: 0 auto;
+  }
+  footer #footer .footer-items {
+    width: 100%;
+    max-width: 100dvw;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 0 25px;
+  }
+  footer #footer .footer-items .logos {
+    display: flex;
+    flex-direction: column;
+  }
+  footer #footer .footer-items .logos #logo {
+    display: flex;
+  }
+  footer #footer .footer-items .logos #logo #logoImg {
+    max-width: 100dvwo;
+    width: 50%;
+  }
+  footer #footer .footer-items .logos #logo #cpdImg {
+    max-width: 100dvw;
+    width: 47%;
+  }
+  footer #footer .footer-items .logos #socials {
+    margin: 0;
+  }
+  footer #footer .footer-items .logos #socials #id,
+  footer #footer .footer-items .logos #socials #fb,
+  footer #footer .footer-items .logos #socials #in {
+    margin-right: 5px;
+  }
+  footer #footer .footer-items .contact {
+    width: 100dvw;
+    margin: 0;
+    margin-bottom: 15px;
+    align-items: center;
+    padding-left: 24px;
+  }
+  footer #footer .footer-items .contact p {
+    margin: 0;
+    text-align: center;
+  }
+  footer #footer #right {
+    width: 100dvw;
+    text-align: center;
+  }
 }
 
 #introductory-section {
@@ -558,6 +846,19 @@ footer #footer #right {
   border: 1px solid #089D93;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
+}
+@media (max-width: 419.98px) {
+  #introductory-section {
+    background-size: cover;
+    background-position: 60%;
+  }
+  #introductory-section #introductory-item #introductory-title {
+    text-align: center;
+  }
+  #introductory-section #introductory-item p {
+    text-align: center;
+    width: 90%;
+  }
 }
 
 #program-cards-section {
@@ -711,6 +1012,16 @@ footer #footer #right {
   display: inline;
   margin-left: 5px;
 }
+@media (max-width: 419.98px) {
+  #program-cards-section #program-cards-subsection #cards-div #cards #first-row-cards {
+    flex-direction: column;
+    gap: 25px;
+  }
+  #program-cards-section #program-cards-subsection #cards-div #cards #second-row-cards {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
 
 #testimonial-programs-section {
   background-color: #62A1A4;
@@ -801,11 +1112,65 @@ footer #footer #right {
   width: 335px;
   margin-bottom: 3px;
 }
-#testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students .elena-maja {
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students.elena-maja {
   margin-left: 30%;
 }
-#testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students .student-marko {
+#testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students.student-marko {
   box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 419.98px) {
+  #testimonial-programs-section {
+    min-height: 100dvh;
+    margin: 0 auto;
+  }
+  #testimonial-programs-section #testimonial-programs-subsection {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+  }
+  #testimonial-programs-section #testimonial-programs-subsection #testimonial-introductury {
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  #testimonial-programs-section #testimonial-programs-subsection #testimonial-introductury #students-test-title {
+    text-align: center;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #testimonial-programs-section #testimonial-programs-subsection #testimonial-introductury p {
+    text-align: center;
+    padding: 0 30px;
+  }
+  #testimonial-programs-section #testimonial-programs-subsection #testimonial-students {
+    margin-right: 0;
+    max-width: 90%;
+    margin-bottom: 10px;
+  }
+  #testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students .student {
+    margin: 20px 0;
+    padding-left: 10px;
+    width: auto;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  #testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students .student img {
+    width: 70px;
+  }
+  #testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students .student #elena p {
+    width: 100%;
+  }
+  #testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students .student #maja p {
+    width: 100%;
+  }
+  #testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students .student #marko p {
+    width: 91%;
+  }
+  #testimonial-programs-section #testimonial-programs-subsection #testimonial-students #subtestimonial-students.student-marko #marko p:nth-child(2) {
+    width: 70%;
+  }
 }
 
 .popups {
@@ -1043,6 +1408,14 @@ footer #footer #right {
   flex-wrap: wrap;
   width: 700px;
 }
+.popups #digital-marketing-popup .highlights .highlights-icons .icon:nth-of-type(1),
+.popups #graphic-design-popup .highlights .highlights-icons .icon:nth-of-type(1),
+.popups #motion-graphics-popup .highlights .highlights-icons .icon:nth-of-type(1),
+.popups #uxui-design-popup .highlights .highlights-icons .icon:nth-of-type(1),
+.popups #interior-design-popup .highlights .highlights-icons .icon:nth-of-type(1),
+.popups #frontend-popup .highlights .highlights-icons .icon:nth-of-type(1) {
+  margin-bottom: 25px;
+}
 .popups #digital-marketing-popup .highlights .highlights-icons .icon,
 .popups #graphic-design-popup .highlights .highlights-icons .icon,
 .popups #motion-graphics-popup .highlights .highlights-icons .icon,
@@ -1056,14 +1429,6 @@ footer #footer #right {
   justify-content: space-around;
   flex-wrap: nowrap;
   gap: 12px;
-}
-.popups #digital-marketing-popup .highlights .highlights-icons .icon:nth-of-type(1),
-.popups #graphic-design-popup .highlights .highlights-icons .icon:nth-of-type(1),
-.popups #motion-graphics-popup .highlights .highlights-icons .icon:nth-of-type(1),
-.popups #uxui-design-popup .highlights .highlights-icons .icon:nth-of-type(1),
-.popups #interior-design-popup .highlights .highlights-icons .icon:nth-of-type(1),
-.popups #frontend-popup .highlights .highlights-icons .icon:nth-of-type(1) {
-  margin-bottom: 25px;
 }
 .popups #digital-marketing-popup .highlights .highlights-icons .icon img,
 .popups #graphic-design-popup .highlights .highlights-icons .icon img,
@@ -1113,7 +1478,7 @@ footer #footer #right {
   align-items: center;
   flex-wrap: nowrap;
   gap: 30px;
-  padding: 15px 0;
+  padding-bottom: 20px;
 }
 .popups #digital-marketing-popup .pricing .price-text,
 .popups #graphic-design-popup .pricing .price-text,
@@ -1125,6 +1490,7 @@ footer #footer #right {
   border-radius: 4px;
   width: 100px;
   height: 40px;
+  margin-top: 15px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1428,7 +1794,7 @@ footer #footer #right {
   font-weight: 400;
   font-size: 14px;
   width: 164px;
-  height: 40px;
+  padding: 6px;
 }
 .popups #digital-marketing-popup .pricing .pricing-buttons button:nth-child(2),
 .popups #graphic-design-popup .pricing .pricing-buttons button:nth-child(2),
@@ -1449,6 +1815,292 @@ footer #footer #right {
   border: 1px solid #089D93;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
+}
+@media (max-width: 419.98px) {
+  .popups {
+    width: 100dvw;
+    max-width: 80dvw;
+  }
+  .popups #digital-marketing-popup,
+  .popups #graphic-design-popup,
+  .popups #motion-graphics-popup,
+  .popups #uxui-design-popup,
+  .popups #interior-design-popup,
+  .popups #frontend-popup {
+    width: 80dvw;
+    margin-top: 20px;
+  }
+  .popups #digital-marketing-popup .esc-container,
+  .popups #graphic-design-popup .esc-container,
+  .popups #motion-graphics-popup .esc-container,
+  .popups #uxui-design-popup .esc-container,
+  .popups #interior-design-popup .esc-container,
+  .popups #frontend-popup .esc-container {
+    margin-top: 20px;
+    margin-right: 18px;
+  }
+  .popups #digital-marketing-popup .esc-container img,
+  .popups #graphic-design-popup .esc-container img,
+  .popups #motion-graphics-popup .esc-container img,
+  .popups #uxui-design-popup .esc-container img,
+  .popups #interior-design-popup .esc-container img,
+  .popups #frontend-popup .esc-container img {
+    width: 20px;
+    height: 20px;
+  }
+  .popups #digital-marketing-popup .academy-popup,
+  .popups #graphic-design-popup .academy-popup,
+  .popups #motion-graphics-popup .academy-popup,
+  .popups #uxui-design-popup .academy-popup,
+  .popups #interior-design-popup .academy-popup,
+  .popups #frontend-popup .academy-popup {
+    width: auto;
+    max-width: 50%;
+    margin: 5px auto;
+  }
+  .popups #digital-marketing-popup .academy-popup .academy-container,
+  .popups #graphic-design-popup .academy-popup .academy-container,
+  .popups #motion-graphics-popup .academy-popup .academy-container,
+  .popups #uxui-design-popup .academy-popup .academy-container,
+  .popups #interior-design-popup .academy-popup .academy-container,
+  .popups #frontend-popup .academy-popup .academy-container {
+    flex-direction: column;
+  }
+  .popups #digital-marketing-popup .academy-popup .academy-container .academy-text,
+  .popups #graphic-design-popup .academy-popup .academy-container .academy-text,
+  .popups #motion-graphics-popup .academy-popup .academy-container .academy-text,
+  .popups #uxui-design-popup .academy-popup .academy-container .academy-text,
+  .popups #interior-design-popup .academy-popup .academy-container .academy-text,
+  .popups #frontend-popup .academy-popup .academy-container .academy-text {
+    width: 68dvw;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .popups #digital-marketing-popup .academy-popup .academy-container .academy-text .academy-title,
+  .popups #graphic-design-popup .academy-popup .academy-container .academy-text .academy-title,
+  .popups #motion-graphics-popup .academy-popup .academy-container .academy-text .academy-title,
+  .popups #uxui-design-popup .academy-popup .academy-container .academy-text .academy-title,
+  .popups #interior-design-popup .academy-popup .academy-container .academy-text .academy-title,
+  .popups #frontend-popup .academy-popup .academy-container .academy-text .academy-title {
+    text-align: center;
+  }
+  .popups #digital-marketing-popup .academy-popup .academy-container .academy-text p,
+  .popups #graphic-design-popup .academy-popup .academy-container .academy-text p,
+  .popups #motion-graphics-popup .academy-popup .academy-container .academy-text p,
+  .popups #uxui-design-popup .academy-popup .academy-container .academy-text p,
+  .popups #interior-design-popup .academy-popup .academy-container .academy-text p,
+  .popups #frontend-popup .academy-popup .academy-container .academy-text p {
+    width: 100%;
+    text-align: center;
+  }
+  .popups #digital-marketing-popup .academy-popup .academy-container #graphic-design-popup-img,
+  .popups #graphic-design-popup .academy-popup .academy-container #graphic-design-popup-img,
+  .popups #motion-graphics-popup .academy-popup .academy-container #graphic-design-popup-img,
+  .popups #uxui-design-popup .academy-popup .academy-container #graphic-design-popup-img,
+  .popups #interior-design-popup .academy-popup .academy-container #graphic-design-popup-img,
+  .popups #frontend-popup .academy-popup .academy-container #graphic-design-popup-img {
+    margin: 25px 0;
+  }
+  .popups #digital-marketing-popup .academy-popup .academy-container img,
+  .popups #graphic-design-popup .academy-popup .academy-container img,
+  .popups #motion-graphics-popup .academy-popup .academy-container img,
+  .popups #uxui-design-popup .academy-popup .academy-container img,
+  .popups #interior-design-popup .academy-popup .academy-container img,
+  .popups #frontend-popup .academy-popup .academy-container img {
+    width: 70dvw;
+    height: 250px;
+  }
+  .popups #digital-marketing-popup .overview,
+  .popups #graphic-design-popup .overview,
+  .popups #motion-graphics-popup .overview,
+  .popups #uxui-design-popup .overview,
+  .popups #interior-design-popup .overview,
+  .popups #frontend-popup .overview {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+  .popups #digital-marketing-popup .overview p,
+  .popups #graphic-design-popup .overview p,
+  .popups #motion-graphics-popup .overview p,
+  .popups #uxui-design-popup .overview p,
+  .popups #interior-design-popup .overview p,
+  .popups #frontend-popup .overview p {
+    width: 100%;
+    text-align: center;
+  }
+  .popups #digital-marketing-popup .highlights,
+  .popups #graphic-design-popup .highlights,
+  .popups #motion-graphics-popup .highlights,
+  .popups #uxui-design-popup .highlights,
+  .popups #interior-design-popup .highlights,
+  .popups #frontend-popup .highlights {
+    width: auto;
+    max-width: 80%;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .popups #digital-marketing-popup .highlights .highlights-text,
+  .popups #graphic-design-popup .highlights .highlights-text,
+  .popups #motion-graphics-popup .highlights .highlights-text,
+  .popups #uxui-design-popup .highlights .highlights-text,
+  .popups #interior-design-popup .highlights .highlights-text,
+  .popups #frontend-popup .highlights .highlights-text {
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .popups #digital-marketing-popup .highlights .highlights-text p,
+  .popups #graphic-design-popup .highlights .highlights-text p,
+  .popups #motion-graphics-popup .highlights .highlights-text p,
+  .popups #uxui-design-popup .highlights .highlights-text p,
+  .popups #interior-design-popup .highlights .highlights-text p,
+  .popups #frontend-popup .highlights .highlights-text p {
+    width: 80%;
+    text-align: center;
+  }
+  .popups #digital-marketing-popup .highlights .highlights-text .full-program-btn,
+  .popups #graphic-design-popup .highlights .highlights-text .full-program-btn,
+  .popups #motion-graphics-popup .highlights .highlights-text .full-program-btn,
+  .popups #uxui-design-popup .highlights .highlights-text .full-program-btn,
+  .popups #interior-design-popup .highlights .highlights-text .full-program-btn,
+  .popups #frontend-popup .highlights .highlights-text .full-program-btn {
+    width: 80%;
+  }
+  .popups #digital-marketing-popup .highlights .highlights-icons,
+  .popups #graphic-design-popup .highlights .highlights-icons,
+  .popups #motion-graphics-popup .highlights .highlights-icons,
+  .popups #uxui-design-popup .highlights .highlights-icons,
+  .popups #interior-design-popup .highlights .highlights-icons,
+  .popups #frontend-popup .highlights .highlights-icons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+  .popups #digital-marketing-popup .highlights .highlights-icons .icon,
+  .popups #graphic-design-popup .highlights .highlights-icons .icon,
+  .popups #motion-graphics-popup .highlights .highlights-icons .icon,
+  .popups #uxui-design-popup .highlights .highlights-icons .icon,
+  .popups #interior-design-popup .highlights .highlights-icons .icon,
+  .popups #frontend-popup .highlights .highlights-icons .icon {
+    max-width: 80%;
+    gap: 0;
+    align-items: center;
+  }
+  .popups #digital-marketing-popup .highlights .highlights-icons .icon p,
+  .popups #graphic-design-popup .highlights .highlights-icons .icon p,
+  .popups #motion-graphics-popup .highlights .highlights-icons .icon p,
+  .popups #uxui-design-popup .highlights .highlights-icons .icon p,
+  .popups #interior-design-popup .highlights .highlights-icons .icon p,
+  .popups #frontend-popup .highlights .highlights-icons .icon p {
+    text-align: center;
+  }
+  .popups #digital-marketing-popup .highlights .highlights-icons .icon:nth-child(1),
+  .popups #graphic-design-popup .highlights .highlights-icons .icon:nth-child(1),
+  .popups #motion-graphics-popup .highlights .highlights-icons .icon:nth-child(1),
+  .popups #uxui-design-popup .highlights .highlights-icons .icon:nth-child(1),
+  .popups #interior-design-popup .highlights .highlights-icons .icon:nth-child(1),
+  .popups #frontend-popup .highlights .highlights-icons .icon:nth-child(1) {
+    margin-bottom: 0;
+  }
+  .popups #digital-marketing-popup .pricing,
+  .popups #graphic-design-popup .pricing,
+  .popups #motion-graphics-popup .pricing,
+  .popups #uxui-design-popup .pricing,
+  .popups #interior-design-popup .pricing,
+  .popups #frontend-popup .pricing {
+    width: auto;
+    max-width: 100%;
+    gap: 15px;
+    padding: 25px 0;
+  }
+  .popups #digital-marketing-popup .pricing .price-text span,
+  .popups #graphic-design-popup .pricing .price-text span,
+  .popups #motion-graphics-popup .pricing .price-text span,
+  .popups #uxui-design-popup .pricing .price-text span,
+  .popups #interior-design-popup .pricing .price-text span,
+  .popups #frontend-popup .pricing .price-text span {
+    padding: 8px;
+  }
+  .popups #digital-marketing-popup .pricing .first-p,
+  .popups #graphic-design-popup .pricing .first-p,
+  .popups #motion-graphics-popup .pricing .first-p,
+  .popups #uxui-design-popup .pricing .first-p,
+  .popups #interior-design-popup .pricing .first-p,
+  .popups #frontend-popup .pricing .first-p {
+    width: 90%;
+    text-align: center;
+  }
+  .popups #digital-marketing-popup .pricing .pricing-containers,
+  .popups #graphic-design-popup .pricing .pricing-containers,
+  .popups #motion-graphics-popup .pricing .pricing-containers,
+  .popups #uxui-design-popup .pricing .pricing-containers,
+  .popups #interior-design-popup .pricing .pricing-containers,
+  .popups #frontend-popup .pricing .pricing-containers {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+  .popups #digital-marketing-popup .pricing .pricing-containers .prices-features,
+  .popups #graphic-design-popup .pricing .pricing-containers .prices-features,
+  .popups #motion-graphics-popup .pricing .pricing-containers .prices-features,
+  .popups #uxui-design-popup .pricing .pricing-containers .prices-features,
+  .popups #interior-design-popup .pricing .pricing-containers .prices-features,
+  .popups #frontend-popup .pricing .pricing-containers .prices-features {
+    height: auto;
+    width: 87%;
+    flex-direction: column;
+  }
+  .popups #digital-marketing-popup .pricing .pricing-containers .prices-features .total-price,
+  .popups #graphic-design-popup .pricing .pricing-containers .prices-features .total-price,
+  .popups #motion-graphics-popup .pricing .pricing-containers .prices-features .total-price,
+  .popups #uxui-design-popup .pricing .pricing-containers .prices-features .total-price,
+  .popups #interior-design-popup .pricing .pricing-containers .prices-features .total-price,
+  .popups #frontend-popup .pricing .pricing-containers .prices-features .total-price {
+    gap: 17px;
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid #FFFFFF;
+    padding: 15px 0;
+  }
+  .popups #digital-marketing-popup .pricing .pricing-containers .prices-features .features,
+  .popups #graphic-design-popup .pricing .pricing-containers .prices-features .features,
+  .popups #motion-graphics-popup .pricing .pricing-containers .prices-features .features,
+  .popups #uxui-design-popup .pricing .pricing-containers .prices-features .features,
+  .popups #interior-design-popup .pricing .pricing-containers .prices-features .features,
+  .popups #frontend-popup .pricing .pricing-containers .prices-features .features {
+    padding: 15px 0;
+  }
+  .popups #digital-marketing-popup .pricing .pricing-containers .prices-features .features .features-container,
+  .popups #graphic-design-popup .pricing .pricing-containers .prices-features .features .features-container,
+  .popups #motion-graphics-popup .pricing .pricing-containers .prices-features .features .features-container,
+  .popups #uxui-design-popup .pricing .pricing-containers .prices-features .features .features-container,
+  .popups #interior-design-popup .pricing .pricing-containers .prices-features .features .features-container,
+  .popups #frontend-popup .pricing .pricing-containers .prices-features .features .features-container {
+    gap: 7px;
+  }
+  .popups #digital-marketing-popup .pricing .second-p,
+  .popups #graphic-design-popup .pricing .second-p,
+  .popups #motion-graphics-popup .pricing .second-p,
+  .popups #uxui-design-popup .pricing .second-p,
+  .popups #interior-design-popup .pricing .second-p,
+  .popups #frontend-popup .pricing .second-p {
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+  }
+  .popups #digital-marketing-popup .pricing .pricing-buttons,
+  .popups #graphic-design-popup .pricing .pricing-buttons,
+  .popups #motion-graphics-popup .pricing .pricing-buttons,
+  .popups #uxui-design-popup .pricing .pricing-buttons,
+  .popups #interior-design-popup .pricing .pricing-buttons,
+  .popups #frontend-popup .pricing .pricing-buttons {
+    width: 85%;
+    padding-bottom: 30px;
+  }
 }
 
 .overlay {
@@ -1487,6 +2139,6 @@ footer #footer #right {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-1584px);
+    transform: translateX(-1452px);
   }
 }/*# sourceMappingURL=main.css.map */
